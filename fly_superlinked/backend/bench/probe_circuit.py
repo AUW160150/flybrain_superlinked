@@ -11,17 +11,18 @@ from pathlib import Path
 import numpy as np
 
 from backend.brain.circuit import circuit_edges, load_circuit
+from backend.brain.controller import build_groups
 from backend.brain.lif import BatchedLIF
 
 READ = ["DNa02_L", "DNa02_R", "DNa01_L", "DNa01_R", "DNa_all_L", "DNa_all_R", "DNp09", "DNp01_L", "DNp01_R", "DN_all"]
-VIS = ["LC11", "HS", "LC4", "LC6", "LPLC2", "LC16"]
+VIS = ["LC10", "AOTU", "LC11", "HS", "LC4", "LC6", "LPLC2", "LC16"]
 
 
 def run(brain_type, amps_list, ms=300):
     c = load_circuit()
     pre, post, w = circuit_edges(brain_type)
     B = len(amps_list)
-    brain = BatchedLIF(c["N"], pre, post, w, c["groups"], B=B)
+    brain = BatchedLIF(c["N"], pre, post, w, build_groups(), B=B)
     brain.set_amps(amps_list)
     brain.step(100)                      # transient
     counts, _ = brain.step(ms)
@@ -31,7 +32,7 @@ def run(brain_type, amps_list, ms=300):
 
 def main(amp=0.15, go=0.15):
     out = {"amp": amp, "dnp09_go": go, "window_ms": 300, "brains": {}}
-    for bt in ("real", "rewired"):
+    for bt in ("real", "rewired", "rewired_class"):
         conds = [("rest", {}), ("go", {"DNp09": go})]
         for g in VIS:
             for side in ("L", "R"):

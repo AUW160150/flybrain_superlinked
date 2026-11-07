@@ -1,6 +1,10 @@
-real: 14 conditions in 0.3s, E=401680
+real: 18 conditions in 0.4s, E=401680
   rest           DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=0.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.0
   go             DNa02_L=50.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=13.0 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
+  go+LC10_L      DNa02_L=50.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=13.0 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
+  go+LC10_R      DNa02_L=0.0 DNa02_R=76.7 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=15.9 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
+  go+AOTU_L      DNa02_L=163.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=33.7 DNa_all_R=0.0 DNp09=91.7 DNp01_L=0.0 DNp01_R=0.0 DN_all=3.9
+  go+AOTU_R      DNa02_L=6.7 DNa02_R=96.7 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=1.1 DNa_all_R=13.3 DNp09=93.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=2.5
   go+LC11_L      DNa02_L=50.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=13.0 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
   go+LC11_R      DNa02_L=50.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=13.0 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
   go+HS_L        DNa02_L=53.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=14.1 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.7
@@ -13,9 +17,13 @@ real: 14 conditions in 0.3s, E=401680
   go+LPLC2_R     DNa02_L=6.7 DNa02_R=0.0 DNa01_L=16.7 DNa01_R=0.0 DNa_all_L=5.9 DNa_all_R=0.0 DNp09=33.3 DNp01_L=120.0 DNp01_R=130.0 DN_all=6.5
   go+LC16_L      DNa02_L=10.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=23.3 DNa_all_L=3.7 DNa_all_R=2.6 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.7
   go+LC16_R      DNa02_L=20.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=4.1 DNa_all_R=0.0 DNp09=98.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=2.4
-rewired: 14 conditions in 0.5s, E=401680
+rewired: 18 conditions in 0.9s, E=401680
   rest           DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=0.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.0
   go             DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.6
+  go+LC10_L      DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.6
+  go+LC10_R      DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=3.7 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.7
+  go+AOTU_L      DNa02_L=106.7 DNa02_R=113.3 DNa01_L=150.0 DNa01_R=160.0 DNa_all_L=70.4 DNa_all_R=54.4 DNp09=211.7 DNp01_L=133.3 DNp01_R=126.7 DN_all=46.6
+  go+AOTU_R      DNa02_L=10.0 DNa02_R=73.3 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=1.1 DNa_all_R=12.2 DNp09=103.3 DNp01_L=23.3 DNp01_R=0.0 DN_all=1.5
   go+LC11_L      DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.6
   go+LC11_R      DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.6
   go+HS_L        DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.6
@@ -28,3 +36,22 @@ rewired: 14 conditions in 0.5s, E=401680
   go+LPLC2_R     DNa02_L=190.0 DNa02_R=156.7 DNa01_L=210.0 DNa01_R=190.0 DNa_all_L=104.4 DNa_all_R=69.3 DNp09=253.3 DNp01_L=183.3 DNp01_R=120.0 DN_all=72.1
   go+LC16_L      DNa02_L=76.7 DNa02_R=103.3 DNa01_L=93.3 DNa01_R=123.3 DNa_all_L=53.3 DNa_all_R=42.6 DNp09=180.0 DNp01_L=83.3 DNp01_R=56.7 DN_all=36.4
   go+LC16_R      DNa02_L=153.3 DNa02_R=123.3 DNa01_L=170.0 DNa01_R=173.3 DNa_all_L=81.9 DNa_all_R=60.4 DNp09=226.7 DNp01_L=150.0 DNp01_R=93.3 DN_all=55.3
+rewired_class: 18 conditions in 9.8s, E=401680
+  rest           DNa02_L=0.0 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.0 DNa_all_R=0.0 DNp09=0.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=0.0
+  go             DNa02_L=3.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.7 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.4
+  go+LC10_L      DNa02_L=3.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.7 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.5
+  go+LC10_R      DNa02_L=3.3 DNa02_R=20.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.7 DNa_all_R=2.2 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.6
+  go+AOTU_L      DNa02_L=13.3 DNa02_R=53.3 DNa01_L=50.0 DNa01_R=0.0 DNa_all_L=20.4 DNa_all_R=7.0 DNp09=86.7 DNp01_L=43.3 DNp01_R=0.0 DN_all=7.8
+  go+AOTU_R      DNa02_L=86.7 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=3.3 DNa_all_L=11.9 DNa_all_R=0.4 DNp09=78.3 DNp01_L=0.0 DNp01_R=0.0 DN_all=6.3
+  go+LC11_L      DNa02_L=6.7 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=1.5 DNa_all_R=0.0 DNp09=101.7 DNp01_L=6.7 DNp01_R=0.0 DN_all=1.6
+  go+LC11_R      DNa02_L=3.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=0.7 DNa_all_R=0.0 DNp09=100.0 DNp01_L=0.0 DNp01_R=0.0 DN_all=1.4
+  go+HS_L        DNa02_L=3.3 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=1.1 DNa_all_R=0.0 DNp09=100.0 DNp01_L=3.3 DNp01_R=0.0 DN_all=1.7
+  go+HS_R        DNa02_L=6.7 DNa02_R=0.0 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=1.5 DNa_all_R=0.0 DNp09=100.0 DNp01_L=3.3 DNp01_R=0.0 DN_all=1.6
+  go+LC4_L       DNa02_L=150.0 DNa02_R=90.0 DNa01_L=73.3 DNa01_R=0.0 DNa_all_L=60.7 DNa_all_R=19.3 DNp09=91.7 DNp01_L=160.0 DNp01_R=0.0 DN_all=27.2
+  go+LC4_R       DNa02_L=83.3 DNa02_R=16.7 DNa01_L=0.0 DNa01_R=0.0 DNa_all_L=15.6 DNa_all_R=8.9 DNp09=73.3 DNp01_L=0.0 DNp01_R=160.0 DN_all=19.7
+  go+LC6_L       DNa02_L=10.0 DNa02_R=20.0 DNa01_L=30.0 DNa01_R=0.0 DNa_all_L=11.9 DNa_all_R=4.1 DNp09=95.0 DNp01_L=33.3 DNp01_R=0.0 DN_all=4.9
+  go+LC6_R       DNa02_L=43.3 DNa02_R=16.7 DNa01_L=20.0 DNa01_R=0.0 DNa_all_L=12.2 DNa_all_R=2.2 DNp09=91.7 DNp01_L=6.7 DNp01_R=16.7 DN_all=9.2
+  go+LPLC2_L     DNa02_L=73.3 DNa02_R=70.0 DNa01_L=23.3 DNa01_R=0.0 DNa_all_L=41.5 DNa_all_R=10.0 DNp09=103.3 DNp01_L=116.7 DNp01_R=0.0 DN_all=22.3
+  go+LPLC2_R     DNa02_L=86.7 DNa02_R=40.0 DNa01_L=0.0 DNa01_R=3.3 DNa_all_L=18.1 DNa_all_R=13.0 DNp09=65.0 DNp01_L=0.0 DNp01_R=100.0 DN_all=21.1
+  go+LC16_L      DNa02_L=3.3 DNa02_R=43.3 DNa01_L=40.0 DNa01_R=0.0 DNa_all_L=9.6 DNa_all_R=8.1 DNp09=86.7 DNp01_L=60.0 DNp01_R=0.0 DN_all=7.1
+  go+LC16_R      DNa02_L=70.0 DNa02_R=50.0 DNa01_L=3.3 DNa01_R=0.0 DNa_all_L=15.6 DNa_all_R=6.7 DNp09=86.7 DNp01_L=6.7 DNp01_R=26.7 DN_all=14.8

@@ -9648,3 +9648,1751 @@ shared reactive 14 True 0 1
 [2m2026-11-07T20:55:53.806906[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
 
 [1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:55.539813[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.14s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:55.540016[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:55:55.544140[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:55.545461[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:55:55.546989[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:55.566762[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.17s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:55.566979[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:55:55.570209[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:55.571507[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:55:55.572496[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 17, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:55:55.577455[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 9 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:58.440844[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-15-41269)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:55:58.481995[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:55:58.488634[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:55:58.492560[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:58.645960[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:58.668534[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:55:58.669228[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:58.671949[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:55:58.770604[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:55:58.771423[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:58.775612[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:55:58.790671[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:00.277054[0m [[32m[1minfo     [0m] [1mPipeline item started: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:00.277481[0m [[32m[1minfo     [0m] [1mCoroutine task started: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.277763[0m [[32m[1minfo     [0m] [1mCoroutine task started: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.277993[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset starting[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.278072[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] starting: save files and compute content hashes (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.278193[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] finished in 0.000 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.278263[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] starting: resolve data IDs (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.282334[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] finished in 0.004 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.282562[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] starting: process files and build data records (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.283514[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] finished in 0.001 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.283605[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] starting: DB commit (1 new, 0 updated)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.287253[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] finished in 0.004 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.287382[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset finished in 0.009 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:00.287589[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.287864[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.288046[0m [[32m[1minfo     [0m] [1mPipeline item completed: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:00.345450[0m [[32m[1minfo     [0m] [1mBuilding memory for dataset 'outcomes': extraction run 531ad54a-764d-4bde-9ef5-207f80de0f67 (cognify_pipeline) started; the indexing run goes first so the data answers searches before extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:00.369476[0m [[32m[1minfo     [0m] [1mIndexing dataset 'outcomes' (indexing_pipeline, run d5d7cd7d-7763-4dfe-aa09-5d435c0f0af1): chunking and embedding 1 item(s) so chunk searches answer before entity extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:00.387549[0m [[32m[1minfo     [0m] [1mPipeline item started: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:00.387955[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.388519[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.394414[0m [[32m[1minfo     [0m] [1mCoroutine task started: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:00.771256[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.771604[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.771781[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.771928[0m [[32m[1minfo     [0m] [1mPipeline item completed: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:00.786506[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' is indexed: 1 item(s) chunked and embedded, 0 already were. Chunk searches (CHUNKS, CHUNKS_LEXICAL, RAG_COMPLETION, HYBRID_COMPLETION) answer now; entity extraction is next, and graph-based answers improve once it completes.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:00.786938[0m [[32m[1minfo     [0m] [1mExtracting entities and relationships for dataset 'outcomes' (cognify_pipeline, run 531ad54a-764d-4bde-9ef5-207f80de0f67).[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:00.842338[0m [[32m[1minfo     [0m] [1mPipeline item started: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:00.843172[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.843631[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.890793[0m [[32m[1minfo     [0m] [1mCoroutine task started: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:00.896510[0m [[32m[1minfo     [0m] [1m1 of 1 chunk(s) are already indexed and will not be embedded again.[0m [[0m[1m[34mfind_indexed_chunks[0m][0m
+
+[2m2026-11-07T20:56:00.896667[0m [[32m[1minfo     [0m] [1mCoroutine task started: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:08.600001[0m [[33m[1mwarning  [0m] [1mTimestamp '22s' is not a normalized time string; kept as an entity[0m [[0m[1m[34mexpand_with_nodes_and_edges[0m][0m
+
+[2m2026-11-07T20:56:08.606050[0m [[32m[1minfo     [0m] [1mCoroutine task started: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:09.592500[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.592786[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.592915[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.593026[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.593133[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.593241[0m [[32m[1minfo     [0m] [1mPipeline item completed: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:09.609012[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' memory is fully built: entities and relationships extracted for 1 item(s), 18 already were. Chunk and graph searches answer.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:09.723678[0m [[32m[1minfo     [0m] [1mVector store compaction: 8 collection(s), fragments 17 -> 4, 15 old version(s) removed, left for later runs: 4 task(s) and 0 version(s)[0m [[0m[1m[34mcompact_vector_store[0m][0m
+
+[2m2026-11-07T20:56:09.798920[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:09.799150[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.799302[0m [[32m[1minfo     [0m] [1mExtracting feedback QAs from session cache[0m [[0m[1m[34mextract_feedback_qas[0m][0m
+
+[2m2026-11-07T20:56:09.800485[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.800614[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:09.806065[0m [[32m[1minfo     [0m] [1mFeedback weight memify pipeline completed[0m [[0m[1m[34mapply_feedback_weights_pipeline[0m][0m [36mextra[0m=[35m{'dataset_id': 'ba556235-e50b-55f8-80f9-68b41ac2c531', 'session_count': 1, 'alpha': 0.1, 'batch_size': 100}[0m
+
+[2m2026-11-07T20:56:09.806155[0m [[32m[1minfo     [0m] [1mimprove: feedback weights applied from 1 session(s)[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:56:09.816082[0m [[32m[1minfo     [0m] [1mimprove: distilled session 'courier-15-41269' -> status=no_gated_entries documents=0[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:56:09.865061[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:09.865320[0m [[32m[1minfo     [0m] [1mCoroutine task started: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:09.867021[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:09.876855[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 30 nodes and 122 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:09.883040[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 8 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:09.888559[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:10.408868[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['0798db43-3a71-5dcc-9a33-8dcaeba90449']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:11.286558[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['7c341960-eb36-589d-b08e-4efd46a63c99']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:11.305764[0m [[33m[1mwarning  [0m] [1mConflict review skipped entity c1aa6511-1b54-52b3-b1d4-dae92d771c52: too large for one call[0m [[0m[1m[34mreview_conflicts[0m][0m
+
+[2m2026-11-07T20:56:11.801058[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['a137915f-9e03-5c3b-9405-6312da6b328d']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:11.820263[0m [[32m[1minfo     [0m] [1mCoroutine task started: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:11.820630[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:11.820794[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:11.820909[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:11.821014[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:11.828645[0m [[33m[1mwarning  [0m] [1mConflict review could not review entities: ['0798db43-3a71-5dcc-9a33-8dcaeba90449', '7c341960-eb36-589d-b08e-4efd46a63c99', 'a137915f-9e03-5c3b-9405-6312da6b328d'][0m [[0m[1m[34mreview_conflicts[0m][0m
+
+[2m2026-11-07T20:56:11.871855[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:11.872113[0m [[32m[1minfo     [0m] [1mCoroutine task started: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:11.877431[0m [[32m[1minfo     [0m] [1mCoroutine task started: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:12.158932[0m [[32m[1minfo     [0m] [1mDataset routing index for ba556235-e50b-55f8-80f9-68b41ac2c531: 2 row(s) written, 0 removed[0m [[0m[1m[34mdataset_routing[0m][0m
+
+[2m2026-11-07T20:56:12.190603[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:12.190882[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:12.191029[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:12.197283[0m [[32m[1minfo     [0m] [1mimprove: global context index updated[0m [[0m[1m[34mimprove[0m][0m
+shared reactive 15 True 0 1
+
+[2m2026-11-07T20:56:12.248451[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:12.251141[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:12.253390[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:12.397920[0m [[32m[1minfo     [0m] [1mFound 19 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:12.398966[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:12.405793[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 19 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:12.525830[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:12.526034[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:12.527762[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.527881[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.533889[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.536520[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.553237[0m [[32m[1minfo     [0m] [1mrecall: 35 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:12.898537[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.17s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.899187[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:12.904664[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 84 nodes and 253 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.907330[0m [[32m[1minfo     [0m] [1mGraph projection completed: 84 nodes, 253 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:12.909343[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:12.909856[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 23, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:12.913764[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 8 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:14.920468[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:14.921374[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:14.924232[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:14.924930[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:14.926350[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:14.965964[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.21s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:14.966192[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:14.967678[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:14.967979[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:14.968432[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:14.971092[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:17.773655[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.17s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:17.773929[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:17.778543[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:17.781036[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:17.783491[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:18.091114[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.49s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:18.091790[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:18.096713[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:18.098681[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:18.100661[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 19, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:18.105694[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 9 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:23.065582[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-16-72200)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:23.113942[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:23.119451[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:23.122305[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:23.307802[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:23.308763[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:23.311865[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:23.743910[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:23.745576[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:23.747387[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:23.750901[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:23.768194[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:24.881113[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:24.883640[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:24.885723[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:25.014485[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:25.015745[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:25.022428[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.029883[0m [[32m[1minfo     [0m] [1mFound 19 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:25.030971[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.038971[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 19 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:25.077854[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:25.078843[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.083745[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.102803[0m [[32m[1minfo     [0m] [1mrecall: 35 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:25.430388[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.12s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.430691[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:25.436223[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.438984[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:25.440869[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:25.465536[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.465770[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:25.470044[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:25.471573[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:25.472857[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 17, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:25.478428[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 9 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:29.086027[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:29.086235[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:29.088509[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:29.088862[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:29.089283[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:29.089427[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:29.089666[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:29.090473[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:29.090733[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:29.091205[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:29.093617[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:31.562333[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.12s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:31.562589[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:31.570263[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 84 nodes and 253 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:31.573859[0m [[32m[1minfo     [0m] [1mGraph projection completed: 84 nodes, 253 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:31.578258[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:31.589729[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:31.590162[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:31.596429[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 84 nodes and 253 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:31.599125[0m [[32m[1minfo     [0m] [1mGraph projection completed: 84 nodes, 253 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:31.600812[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 22, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:31.607406[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 8 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:34.118073[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-16-72200)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:34.203001[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:34.207057[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:34.211539[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:34.327944[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:34.329139[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:34.335663[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:34.352170[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:34.353335[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:34.359344[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:34.455508[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:34.479275[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:36.090227[0m [[32m[1minfo     [0m] [1mPipeline item started: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:36.090534[0m [[32m[1minfo     [0m] [1mCoroutine task started: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.090816[0m [[32m[1minfo     [0m] [1mCoroutine task started: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.091044[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset starting[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.091123[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] starting: save files and compute content hashes (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.091242[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] finished in 0.000 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.091318[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] starting: resolve data IDs (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.094583[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] finished in 0.003 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.094688[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] starting: process files and build data records (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.095548[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] finished in 0.001 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.095629[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] starting: DB commit (1 new, 0 updated)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.098812[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] finished in 0.003 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.098938[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset finished in 0.008 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:56:36.099096[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.099316[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.099489[0m [[32m[1minfo     [0m] [1mPipeline item completed: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:36.387945[0m [[32m[1minfo     [0m] [1mBuilding memory for dataset 'outcomes': extraction run d6361320-e0e6-4195-a53a-4f16f577de85 (cognify_pipeline) started; the indexing run goes first so the data answers searches before extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:36.409039[0m [[32m[1minfo     [0m] [1mIndexing dataset 'outcomes' (indexing_pipeline, run 6b747529-92ab-43f5-a9a3-565afd6361ea): chunking and embedding 1 item(s) so chunk searches answer before entity extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:36.421412[0m [[32m[1minfo     [0m] [1mPipeline item started: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:36.421726[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.422101[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.426537[0m [[32m[1minfo     [0m] [1mCoroutine task started: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:36.763293[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.763601[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.763761[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.763896[0m [[32m[1minfo     [0m] [1mPipeline item completed: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:36.778455[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' is indexed: 1 item(s) chunked and embedded, 0 already were. Chunk searches (CHUNKS, CHUNKS_LEXICAL, RAG_COMPLETION, HYBRID_COMPLETION) answer now; entity extraction is next, and graph-based answers improve once it completes.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:36.778898[0m [[32m[1minfo     [0m] [1mExtracting entities and relationships for dataset 'outcomes' (cognify_pipeline, run d6361320-e0e6-4195-a53a-4f16f577de85).[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:36.839749[0m [[32m[1minfo     [0m] [1mPipeline item started: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:36.840232[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.840620[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.897663[0m [[32m[1minfo     [0m] [1mCoroutine task started: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:36.902601[0m [[32m[1minfo     [0m] [1m1 of 1 chunk(s) are already indexed and will not be embedded again.[0m [[0m[1m[34mfind_indexed_chunks[0m][0m
+
+[2m2026-11-07T20:56:36.902727[0m [[32m[1minfo     [0m] [1mCoroutine task started: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:37.257993[0m [[32m[1minfo     [0m] [1mCoroutine task started: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:38.044826[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.045086[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.045216[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.045319[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.045414[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.045540[0m [[32m[1minfo     [0m] [1mPipeline item completed: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:38.056672[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' memory is fully built: entities and relationships extracted for 1 item(s), 19 already were. Chunk and graph searches answer.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:56:38.190015[0m [[32m[1minfo     [0m] [1mVector store compaction: 8 collection(s), fragments 15 -> 4, 15 old version(s) removed, left for later runs: 2 task(s) and 0 version(s)[0m [[0m[1m[34mcompact_vector_store[0m][0m
+
+[2m2026-11-07T20:56:38.274978[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:38.275273[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.275436[0m [[32m[1minfo     [0m] [1mExtracting feedback QAs from session cache[0m [[0m[1m[34mextract_feedback_qas[0m][0m
+
+[2m2026-11-07T20:56:38.277188[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.277384[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:38.283835[0m [[32m[1minfo     [0m] [1mFeedback weight memify pipeline completed[0m [[0m[1m[34mapply_feedback_weights_pipeline[0m][0m [36mextra[0m=[35m{'dataset_id': 'ba556235-e50b-55f8-80f9-68b41ac2c531', 'session_count': 1, 'alpha': 0.1, 'batch_size': 100}[0m
+
+[2m2026-11-07T20:56:38.283949[0m [[32m[1minfo     [0m] [1mimprove: feedback weights applied from 1 session(s)[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:56:38.298007[0m [[32m[1minfo     [0m] [1mimprove: distilled session 'courier-16-72200' -> status=no_gated_entries documents=0[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:56:38.362924[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:38.363192[0m [[32m[1minfo     [0m] [1mCoroutine task started: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.364835[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:38.370200[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 22 nodes and 94 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:38.375128[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 16 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:38.380019[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:38.938948[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['0798db43-3a71-5dcc-9a33-8dcaeba90449']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:39.821548[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['7c341960-eb36-589d-b08e-4efd46a63c99']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:40.359223[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['a137915f-9e03-5c3b-9405-6312da6b328d']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:56:40.368681[0m [[32m[1minfo     [0m] [1mCoroutine task started: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.369022[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.369155[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.369268[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.369373[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:40.377256[0m [[33m[1mwarning  [0m] [1mConflict review could not review entities: ['0798db43-3a71-5dcc-9a33-8dcaeba90449', '7c341960-eb36-589d-b08e-4efd46a63c99', 'a137915f-9e03-5c3b-9405-6312da6b328d'][0m [[0m[1m[34mreview_conflicts[0m][0m
+
+[2m2026-11-07T20:56:40.418189[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:40.418435[0m [[32m[1minfo     [0m] [1mCoroutine task started: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.423072[0m [[32m[1minfo     [0m] [1mCoroutine task started: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:40.681122[0m [[32m[1minfo     [0m] [1mDataset routing index for ba556235-e50b-55f8-80f9-68b41ac2c531: 1 row(s) written, 0 removed[0m [[0m[1m[34mdataset_routing[0m][0m
+
+[2m2026-11-07T20:56:40.681345[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.681540[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:56:40.681668[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:56:40.687641[0m [[32m[1minfo     [0m] [1mimprove: global context index updated[0m [[0m[1m[34mimprove[0m][0m
+shared reactive 16 True 0 1
+
+[2m2026-11-07T20:56:40.724811[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:40.726811[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:40.728565[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:41.137836[0m [[32m[1minfo     [0m] [1mFound 20 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:41.139240[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:41.149609[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 20 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.151234[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:41.152105[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.156820[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.355229[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:41.356857[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.363595[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.379166[0m [[32m[1minfo     [0m] [1mrecall: 36 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:41.822539[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.822750[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:41.826482[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.827707[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:41.829551[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:41.829909[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 18, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:41.833439[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 8 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:44.087487[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:44.087835[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:44.091109[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:44.091771[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:44.093361[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:44.114899[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.19s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:44.115088[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:44.116554[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:44.116821[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:44.117263[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:44.120516[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:47.137127[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.13s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:47.137370[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:47.142724[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 86 nodes and 258 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:47.144782[0m [[32m[1minfo     [0m] [1mGraph projection completed: 86 nodes, 258 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:47.146488[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:47.176296[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.17s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:47.176493[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:47.180968[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 86 nodes and 258 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:47.183327[0m [[32m[1minfo     [0m] [1mGraph projection completed: 86 nodes, 258 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:47.184473[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 24, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:47.188594[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:49.295128[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-17-690)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:49.386557[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:49.388775[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:49.390751[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:49.526749[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:49.550104[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:49.551814[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:49.557782[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:49.704545[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:49.705900[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:49.709679[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:49.727914[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:56:50.712354[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:50.714908[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:50.716499[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:50.854940[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:50.855641[0m [[32m[1minfo     [0m] [1mFound 20 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:50.855888[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:50.856671[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:50.860497[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:50.862022[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 20 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:50.890610[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:56:50.891305[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:50.894088[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:50.909021[0m [[32m[1minfo     [0m] [1mrecall: 36 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:51.205254[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.12s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:51.205469[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:51.206954[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:51.207953[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:51.208781[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:51.240564[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:51.240754[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:51.242024[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:51.242341[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:51.242908[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:51.245879[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:54.296948[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.14s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:54.297441[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:54.303960[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 86 nodes and 258 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:54.306151[0m [[32m[1minfo     [0m] [1mGraph projection completed: 86 nodes, 258 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:54.308244[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:54.320993[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.16s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:54.321222[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:54.326418[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 86 nodes and 258 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:54.328952[0m [[32m[1minfo     [0m] [1mGraph projection completed: 86 nodes, 258 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:54.330280[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 16, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:54.334812[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 6 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:56.758688[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.14s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:56.758911[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:56.762346[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:56.763631[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:56.765313[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:56:56.872357[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.25s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:56.872739[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:56.877769[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:56:56.879133[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:56:56.880024[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 17, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:56:56.884761[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 9 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:01.318690[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-17-690)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:57:01.370641[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:01.373864[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:01.375905[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:01.495629[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:01.496566[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:01.503128[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:01.552862[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:01.651050[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:01.652697[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:01.660087[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:01.692013[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:57:03.487555[0m [[32m[1minfo     [0m] [1mPipeline item started: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:03.488301[0m [[32m[1minfo     [0m] [1mCoroutine task started: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.488721[0m [[32m[1minfo     [0m] [1mCoroutine task started: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.489198[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset starting[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.489405[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] starting: save files and compute content hashes (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.489601[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] finished in 0.000 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.489690[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] starting: resolve data IDs (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.497510[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] finished in 0.008 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.497748[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] starting: process files and build data records (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.499441[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] finished in 0.002 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.499641[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] starting: DB commit (1 new, 0 updated)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.504972[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] finished in 0.005 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.505145[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset finished in 0.016 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:57:03.505354[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.505763[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.506015[0m [[32m[1minfo     [0m] [1mPipeline item completed: `979bfd6e-f23e-584f-ae13-409c0d169f80`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:03.589672[0m [[32m[1minfo     [0m] [1mBuilding memory for dataset 'outcomes': extraction run 24f85f4e-6af2-47bf-bef2-b3de3d891b0d (cognify_pipeline) started; the indexing run goes first so the data answers searches before extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:57:03.636831[0m [[32m[1minfo     [0m] [1mIndexing dataset 'outcomes' (indexing_pipeline, run 1912c4c3-d7ca-4dc8-b148-a1355c89d159): chunking and embedding 1 item(s) so chunk searches answer before entity extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:57:03.664372[0m [[32m[1minfo     [0m] [1mPipeline item started: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:03.664721[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.665225[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.672568[0m [[32m[1minfo     [0m] [1mCoroutine task started: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:03.992751[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.993141[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.993493[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:03.993751[0m [[32m[1minfo     [0m] [1mPipeline item completed: `2d76f59c-a5dc-58b9-9660-818e68c49211`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:04.014558[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' is indexed: 1 item(s) chunked and embedded, 0 already were. Chunk searches (CHUNKS, CHUNKS_LEXICAL, RAG_COMPLETION, HYBRID_COMPLETION) answer now; entity extraction is next, and graph-based answers improve once it completes.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:57:04.015119[0m [[32m[1minfo     [0m] [1mExtracting entities and relationships for dataset 'outcomes' (cognify_pipeline, run 24f85f4e-6af2-47bf-bef2-b3de3d891b0d).[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:57:04.127265[0m [[32m[1minfo     [0m] [1mPipeline item started: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:04.128797[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.130737[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.273733[0m [[32m[1minfo     [0m] [1mCoroutine task started: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.286047[0m [[32m[1minfo     [0m] [1m1 of 1 chunk(s) are already indexed and will not be embedded again.[0m [[0m[1m[34mfind_indexed_chunks[0m][0m
+
+[2m2026-11-07T20:57:04.286375[0m [[32m[1minfo     [0m] [1mCoroutine task started: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.588617[0m [[32m[1minfo     [0m] [1mCoroutine task started: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:04.990804[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.991332[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.991661[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.991868[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.992041[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:04.992200[0m [[32m[1minfo     [0m] [1mPipeline item completed: `03799061-b1f7-54ba-a87a-819e9db8c724`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:05.011925[0m [[32m[1minfo     [0m] [1mDataset 'outcomes' memory is fully built: entities and relationships extracted for 1 item(s), 20 already were. Chunk and graph searches answer.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:57:05.208100[0m [[32m[1minfo     [0m] [1mVector store compaction: 8 collection(s), fragments 9 -> 4, 6 old version(s) removed, left for later runs: 2 task(s) and 0 version(s)[0m [[0m[1m[34mcompact_vector_store[0m][0m
+
+[2m2026-11-07T20:57:05.357267[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:05.357708[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:05.358276[0m [[32m[1minfo     [0m] [1mExtracting feedback QAs from session cache[0m [[0m[1m[34mextract_feedback_qas[0m][0m
+
+[2m2026-11-07T20:57:05.361561[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_feedback_qas`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:05.361906[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:05.375175[0m [[32m[1minfo     [0m] [1mFeedback weight memify pipeline completed[0m [[0m[1m[34mapply_feedback_weights_pipeline[0m][0m [36mextra[0m=[35m{'dataset_id': 'ba556235-e50b-55f8-80f9-68b41ac2c531', 'session_count': 1, 'alpha': 0.1, 'batch_size': 100}[0m
+
+[2m2026-11-07T20:57:05.375324[0m [[32m[1minfo     [0m] [1mimprove: feedback weights applied from 1 session(s)[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:57:05.398299[0m [[32m[1minfo     [0m] [1mimprove: distilled session 'courier-17-690' -> status=no_gated_entries documents=0[0m [[0m[1m[34mimprove[0m][0m
+
+[2m2026-11-07T20:57:05.502649[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:05.502995[0m [[32m[1minfo     [0m] [1mCoroutine task started: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:05.505159[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:05.513928[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 22 nodes and 94 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:05.521209[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 16 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:05.526869[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:05.556149[0m [[32m[1minfo     [0m] [1mLadybug database closed successfully[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:05.556893[0m [[32m[1minfo     [0m] [1mLadybug database closed successfully[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:05.975961[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['0798db43-3a71-5dcc-9a33-8dcaeba90449']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:57:06.890006[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['7c341960-eb36-589d-b08e-4efd46a63c99']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:57:07.411218[0m [[33m[1mwarning  [0m] [1mConflict review failed for entities ['a137915f-9e03-5c3b-9405-6312da6b328d']: Unknown or repeated reviewed subject[0m [[0m[1m[34mreview_conflicts[0m][0m [36mexception_message[0m=[35m'Unknown or repeated reviewed subject'[0m [36mexception_type[0m=[35mValueError[0m [36mtraceback[0m=[35mTrue[0m
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1mreview_entities.py[0m:159 in _review                                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m156 [0m[2m│   [0mprompt = build_review_prompt(scope, comparisons, sections)         [31m│[0m
+[31m│[0m   [2m157 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m   [2m158 [0m[2m│   │   [0mresponse = [94mawait[0m _ask_llm(prompt, system_prompt)               [31m│[0m
+[31m│[0m [31m❱ [0m159 [2m│   │   [0mto_write = accept_review_response(response, scope, prompt)     [31m│[0m
+[31m│[0m   [2m160 [0m[2m│   [0m[94mexcept[0m LLMPaymentRequiredError:                                    [31m│[0m
+[31m│[0m   [2m161 [0m[2m│   │   [0m[94mraise[0m                                                          [31m│[0m
+[31m│[0m   [2m162 [0m[2m│   [0m[94mexcept[0m [96mException[0m [94mas[0m error:                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:36 in accept_review_response                                [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 33 [0m[2m│   [0mresponse: ReviewResponse, scope: ReviewScope, prompt: ReviewPrompt [31m│[0m
+[31m│[0m   [2m 34 [0m) -> ConflictsToWrite:                                                 [31m│[0m
+[31m│[0m   [2m 35 [0m[2;90m│   [0m[33m"""Resolve a response's labels against the prompt that was sent.""[0m [31m│[0m
+[31m│[0m [31m❱ [0m 36 [2m│   [0mreviewed = [1;4m_resolve_reviewed_subjects(response.reviewed, prompt)[0m   [31m│[0m
+[31m│[0m   [2m 37 [0m[2m│   [0m[2m# Logged before the two steps below, either of which can reject th[0m [31m│[0m
+[31m│[0m   [2m 38 [0m[2m│   [0m[2m# a partial response is worth its warning even when the rest of it[0m [31m│[0m
+[31m│[0m   [2m 39 [0m[2m│   [0munreviewed = _find_unreviewed_subjects(prompt, reviewed)           [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlin[0m [31m│[0m
+[31m│[0m [2mked/.venv/lib/python3.12/site-packages/cognee/tasks/memify/review_conflicts/[0m [31m│[0m
+[31m│[0m [1maccept_review.py[0m:61 in _resolve_reviewed_subjects                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 58 [0m[2m│   [0m[94mfor[0m label [95min[0m labels:                                               [31m│[0m
+[31m│[0m   [2m 59 [0m[2m│   │   [0msubject = prompt.node_labels.get(label)                        [31m│[0m
+[31m│[0m   [2m 60 [0m[2m│   │   [0m[94mif[0m subject [95mnot[0m [95min[0m prompt.subject_ids [95mor[0m subject [95min[0m reviewed:   [31m│[0m
+[31m│[0m [31m❱ [0m 61 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mValueError[0m[1;4m([0m[1;4;33m"[0m[1;4;33mUnknown or repeated reviewed subject[0m[1;4;33m"[0m[1;4m)[0m   [31m│[0m
+[31m│[0m   [2m 62 [0m[2m│   │   [0mreviewed.add(subject)                                          [31m│[0m
+[31m│[0m   [2m 63 [0m[2m│   [0m[94mif[0m [95mnot[0m reviewed:                                                   [31m│[0m
+[31m│[0m   [2m 64 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mA review requires at least one reviewed subj[0m [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0mUnknown or repeated reviewed subject
+
+
+[2m2026-11-07T20:57:07.423708[0m [[32m[1minfo     [0m] [1mCoroutine task started: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.424132[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `write_conflicts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.424299[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `review_entities`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.424441[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `read_entity_facts`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.424573[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:07.436006[0m [[33m[1mwarning  [0m] [1mConflict review could not review entities: ['0798db43-3a71-5dcc-9a33-8dcaeba90449', '7c341960-eb36-589d-b08e-4efd46a63c99', 'a137915f-9e03-5c3b-9405-6312da6b328d'][0m [[0m[1m[34mreview_conflicts[0m][0m
+
+[2m2026-11-07T20:57:07.492071[0m [[32m[1minfo     [0m] [1mPipeline item started: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:07.492340[0m [[32m[1minfo     [0m] [1mCoroutine task started: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.499052[0m [[32m[1minfo     [0m] [1mCoroutine task started: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:07.755121[0m [[32m[1minfo     [0m] [1mDataset routing index for ba556235-e50b-55f8-80f9-68b41ac2c531: 1 row(s) written, 0 removed[0m [[0m[1m[34mdataset_routing[0m][0m
+
+[2m2026-11-07T20:57:07.755398[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `build_document_index`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.755647[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `load_dataset_content`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:57:07.755805[0m [[32m[1minfo     [0m] [1mPipeline item completed: `4d775d63-42a6-559e-8362-4aa89e3e142e`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:57:07.762901[0m [[32m[1minfo     [0m] [1mimprove: global context index updated[0m [[0m[1m[34mimprove[0m][0m
+shared reactive 17 True 0 1
+
+[2m2026-11-07T20:57:07.813692[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:07.817358[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:07.819420[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the red tower? What hazards such as gusts lie between home and the red tower? Which routes ...'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:07.948149[0m [[32m[1minfo     [0m] [1mFound 21 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:07.949368[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:07.956307[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 21 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:08.036643[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:08.037615[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.043755[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:08.102780[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:08.103785[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.107908[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.122883[0m [[32m[1minfo     [0m] [1mrecall: 37 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:08.462239[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.462485[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:08.466308[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.468232[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:08.470378[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:08.470834[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 18, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:08.476305[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 8 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:13.783414[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.17s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:13.783885[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:13.788246[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:13.789842[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:13.791700[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:14.136730[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.52s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:14.137142[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:14.139511[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:14.140097[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:14.141223[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:14.147955[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:16.297557[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.13s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:16.297825[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:16.306546[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 88 nodes and 263 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:16.309385[0m [[32m[1minfo     [0m] [1mGraph projection completed: 88 nodes, 263 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:16.312741[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:16.320578[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:16.320863[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:16.328361[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 88 nodes and 263 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:16.331644[0m [[32m[1minfo     [0m] [1mGraph projection completed: 88 nodes, 263 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:16.333405[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 24, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:16.339994[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:23.713242[0m [[32m[1minfo     [0m] [1mrecall: 3 results across sources=['graph'] (session=courier-18-27766)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:57:23.765402[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:23.767397[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:23.769541[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'gust hazard wind felt correction'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:24.102659[0m [[32m[1minfo     [0m] [1mFound 0 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:24.117229[0m [[32m[1minfo     [0m] [1mFound 10 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:24.118195[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:24.123052[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:24.132005[0m [[32m[1minfo     [0m] [1mFound 4 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:24.132918[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:24.136661[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 4 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:24.150121[0m [[32m[1minfo     [0m] [1mrecall: 14 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[2m2026-11-07T20:57:25.123502[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:25.125552[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:25.127116[0m [[32m[1minfo     [0m] [1mStarting chunk retrieval for query: 'Where is the ? What hazards such as gusts lie between home and the ? Which routes failed before?'[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:25.271427[0m [[32m[1minfo     [0m] [1mFound 11 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:25.272241[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.280792[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 11 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.282911[0m [[32m[1minfo     [0m] [1mFound 5 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:25.284051[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.285080[0m [[32m[1minfo     [0m] [1mFound 21 chunks from vector search[0m [[0m[1m[34mChunksRetriever[0m][0m
+
+[2m2026-11-07T20:57:25.286498[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.289693[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.295711[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 21 nodes and 0 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.316960[0m [[32m[1minfo     [0m] [1mrecall: 37 results across sources=['graph'] (session=-)[0m [[0m[1m[34mrecall[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:25.652166[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.13s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.652469[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:25.656957[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.658864[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:25.661211[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.662165[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 7 collections in 0.14s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.662376[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:25.666078[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 51 nodes and 156 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:25.667539[0m [[32m[1minfo     [0m] [1mGraph projection completed: 51 nodes, 156 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:25.669249[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 21, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:25.673420[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 10 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:29.923281[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.15s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:29.923624[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:29.926890[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:29.927540[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:29.928636[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:29.968120[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 4 collections in 0.19s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:29.968318[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:29.969723[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 12 nodes and 21 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:29.969998[0m [[32m[1minfo     [0m] [1mGraph projection completed: 12 nodes, 21 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:29.970597[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 12, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:29.973216[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 5 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:32.778607[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.12s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:32.779053[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:32.785644[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 88 nodes and 263 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:32.787907[0m [[32m[1minfo     [0m] [1mGraph projection completed: 88 nodes, 263 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:32.789985[0m [[33m[1mwarning  [0m] [1mNo nodes found in the database[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:57:32.853566[0m [[32m[1minfo     [0m] [1mVector collection retrieval completed: Retrieved distances from 8 collections in 0.19s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:32.853794[0m [[32m[1minfo     [0m] [1mRetrieving ID-filtered graph from database.[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:32.858933[0m [[32m[1minfo     [0m] [1mID-filtered retrieval: 88 nodes and 263 edges in 0.01s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:57:32.861181[0m [[32m[1minfo     [0m] [1mGraph projection completed: 88 nodes, 263 edges in 0.00s[0m [[0m[1m[34mCogneeGraph[0m][0m
+
+[2m2026-11-07T20:57:32.862394[0m [[32m[1minfo     [0m] [1mCompleted resolving edges to text[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mextra[0m=[35m{'node_count': 22, 'connection_count': 15}[0m
+
+[2m2026-11-07T20:57:32.866647[0m [[32m[1minfo     [0m] [1mNeighborhood retrieval (1-hop): 9 nodes and 0 edges in 0.00s[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m

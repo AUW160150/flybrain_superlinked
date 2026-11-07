@@ -26,7 +26,7 @@ export default function Method() {
             <li><b>The 'go' current</b> on DNp09 while a mission is active (as FlyWorld's walk button).</li>
             <li><b>Which target is shown</b>: chosen by the planner and route planner, around the pond, landmarks and remembered gusts.</li>
             <li><b>Decoder gains</b> (dead zone 4 Hz, tanh scale 20 Hz, LC10 current 0.3) chosen on tuning seeds 100–102 with the real circuit, then frozen.</li>
-            <li><b>Gust sensing</b>: a drone notices a gust from the gap between commanded and measured velocity, not from the brain.</li>
+            <li><b>Gust sensing</b>: a drone notices a gust when its measured velocity departs from its own no-wind model of how it should respond, not from the brain.</li>
           </ul>
         </div>
         <div className="card">
@@ -52,7 +52,7 @@ export default function Method() {
         {real ? (
           <div className="tablewrap"><table>
             <thead><tr><th>condition</th><th className="num">DNa02 L</th><th className="num">DNa02 R</th><th className="num">DNa01 L</th><th className="num">DNa01 R</th><th className="num">DNp01 L</th><th className="num">DNp01 R</th><th className="num">rewired DNa02 L / R</th></tr></thead>
-            <tbody>{["go", "go+LC4_L", "go+LC4_R", "go+LPLC2_L", "go+HS_L", "go+LC11_L"].filter((k) => row(k)).map((k) => (
+            <tbody>{["go", "go+LC10_L", "go+LC10_R", "go+AOTU_L", "go+AOTU_R", "go+LC4_L", "go+LC4_R", "go+LPLC2_L", "go+HS_L", "go+LC11_L"].filter((k) => row(k)).map((k) => (
               <tr key={k}><td className="mono small">{k}</td>{["DNa02_L", "DNa02_R", "DNa01_L", "DNa01_R", "DNp01_L", "DNp01_R"].map((n) => <td key={n} className="num">{fmt(row(k)[n], 0)}</td>)}
                 <td className="num">{rew?.[k] ? `${fmt(rew[k].DNa02_L, 0)} / ${fmt(rew[k].DNa02_R, 0)}` : "–"}</td></tr>))}</tbody>
           </table></div>) : <div className="empty">Probe results not found.</div>}

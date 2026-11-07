@@ -38,6 +38,7 @@ With the FlyWorld 'go' current on DNp09 (0.15), stimulating one side of a visual
 - `LC11`, `HS` -> almost no effect on steering DNs.
 - The 'go' current alone produces DNa02 left 50 Hz (the walk-coupled asymmetry FlyWorld calibrates out).
 - In the degree-preserving rewired graph, the same stimuli either do nothing or recruit every DN at once (no lateralisation).
+- In the class-preserving rewired graph, `AOTU` left -> DNa02 **right** 53 Hz and `AOTU` right -> DNa02 **left** 87 Hz: the pursuit pathway is mirrored, so the drone turns away from the target. This is why both controls fail the courier task here.
 
 ## Choices that affect the controller comparison
 
