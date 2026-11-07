@@ -1,5 +1,7 @@
 # DEMO: two minutes
 
+Recorded walkthrough: https://www.loom.com/share/4cfdcb64c2374509bf463aa0c1fe609c
+
 Before the demo: open the app, check the badge top right says **Live** (or pick a replay under *Replays…* if the live sim is slow; the badge then says **Replay**). Reset with brain = real connectome, memory = shared swarm memory, seed 0.
 
 **0:00 – Mission (Mission control).** Click the example chip *"Scouts, map the north side. Courier, take the package to the red tower and come home, avoid the pond."* and **Send mission**. Point at the caption under the button: the plan came from **SIE `Qwen/Qwen3.5-4B`**, a small open model, as strict JSON. The dashed lines are each drone's route; the pond is a no-fly zone on every map; the gust zone is invisible because nobody has felt it yet.
