@@ -4,7 +4,7 @@
 
 Three simulated drones (`scout-1`, `scout-2`, `courier`) fly an outdoor arena. Each drone sees through a compound eye built from 1,709 measured ommatidial directions of a real fruit fly. Each drone is steered by a 10,203-neuron sensory-to-descending sub-circuit of the **MaleCNS v1.0** connectome, simulated as leaky integrate-and-fire neurons in 1 ms steps. Routine agent jobs run on small open models through **Superlinked SIE Serverless**: turning an operator sentence into a JSON flight plan, turning what a drone sees into structured facts, and recognising places it has seen before. Their quality and cost are measured against a frontier model. The drones share what they learn through **cognee**. Every drone is its own cognee user with real read/write permissions. After each mission, outcomes, feedback and corrections flow back into memory. Every experiment includes a degree-preserving rewired connectome and a reactive baseline, and the results are reported as measured.
 
-Built for LOCALHOST NYC (7 November 2026) on top of the owner's [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
+**Live: https://flybrain-swarm.onrender.com** (Render, Starter plan). Built for LOCALHOST NYC (7 November 2026) on top of the owner's [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
 
 ## Which part targets which prize
 
@@ -89,7 +89,7 @@ _Memory ablation not run._
 cd fly_superlinked
 python3.12 -m venv .venv
 .venv/bin/pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
-.venv/bin/pip install -r requirements.txt
+.venv/bin/pip install -r requirements.txt && .venv/bin/pip install --no-deps sie-sdk==0.11.0
 cp .env.example .env            # add SIE_API_KEY (and optionally FRONTIER_API_KEY)
 .venv/bin/uvicorn backend.api.server:app --port 8000
 # frontend (dev): cd frontend && npm ci && npm run dev   -> http://localhost:5173
@@ -121,7 +121,7 @@ for a in shared private none; do .venv/bin/python -m backend.bench.memory_ablati
 
 ## Deploy on Render
 
-`render.yaml` at the repository root is a Blueprint for one Docker web service: the frontend is built with Node, then served by FastAPI along with the API and WebSocket. It has a 2 GB persistent disk at `/var/data` for cognee's stores, and a health check on `/healthz`. Set `SIE_API_KEY` and `FRONTIER_API_KEY` in the dashboard. Use at least the **Starter** plan: the free plan sleeps and does not have enough memory for torch plus cognee. Bench results and replays ship in the repo, so a cold deploy still has the full Results page and Replay mode.
+`render.yaml` at the repository root is a Blueprint for one Docker web service: the frontend is built with Node, then served by FastAPI along with the API and WebSocket. It has a 2 GB persistent disk at `/var/data` for cognee's stores, and a health check on `/healthz`. Set `SIE_API_KEY` and `FRONTIER_API_KEY` in the dashboard. Use at least the **Starter** plan: the free plan sleeps and does not have enough memory for torch plus cognee. Bench results and replays ship in the repo, so a cold deploy still has the full Results page and Replay mode. The live service was created with the Render CLI, which cannot attach disks; it keeps cognee's stores in `/tmp/swarm-data`, so live memory resets on each deploy. Add the disk from the Blueprint or the dashboard to keep it.
 
 ## Method and limitations (short version; the app has the full panel)
 

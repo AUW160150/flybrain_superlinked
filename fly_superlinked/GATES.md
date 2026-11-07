@@ -49,5 +49,8 @@ Scope: the full prompt in prompt.md. That covers sim, compound eye, connectome c
 - [x] G8: the UI was inspected in light and dark mode and at phone width: arena with drones, eye mosaic and raster, memory feed with a denied write and the graph, results charts, method panel
   EVIDENCE: 2026-11-07 Playwright screenshots of all five pages at 1440 px (light and dark) and 390 px (light), no console errors. Seen: live arena with three drones, trails, dashed routes and the revealed gust zone; eye mosaic with stripe outlines and a raster showing LC10 L -> AOTU L -> DNa02 L; memory feed with cognee 403 denials and the cognee graph; results bars and tables; method panel. Fixed on the way: oversized chart text, empty space under the arena, missing phone gutter, phone overflow from filter chips (all pages now exactly 390 px wide).
 
-- [ ] G9: a live Render URL answers /healthz
+- [ ] G9: the live Render URL answers /healthz and serves the bench results
+  CHECK: curl -sf --max-time 60 https://flybrain-swarm.onrender.com/healthz | grep -q '"ok":true' && curl -sf --max-time 60 https://flybrain-swarm.onrender.com/api/bench/controllers | grep -q '"real"' && echo LIVE_URL_OK
+  EXPECT: LIVE_URL_OK
+  CWD: .
   EVIDENCE: pending

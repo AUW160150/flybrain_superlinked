@@ -1,0 +1,352 @@
+{
+ "arm": "shared",
+ "brain": "reactive",
+ "memory_backend": "cognee",
+ "runs": [
+  {
+   "seed": 0,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 28.28,
+   "collisions": 0,
+   "gust_entries": 1,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 15 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding a \"red tower,\" its location, or which specific routes failed. The context only lists gust hazards detected by scout-1 and scout-2 at various coordinates: R\"",
+    "courier recalled 15 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Location of red tower: Not mentioned in the context. Hazards (Gusts): The context lists gust hazards detected by scout-1 and scout-2 at the following coordinates: Scout-1: (2.2, 0.1), (4.5, 4.8), (3.3, 2.5) Scout-2: (7.6\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 1,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 22.24,
+   "collisions": 0,
+   "gust_entries": 1,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 18 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context: 1. Location of the red tower: The context does not contain information regarding the location of a \"red tower.\" 2. Hazards between home and the red tower: Since the location of the red towe\"",
+    "courier recalled 18 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" or any failed routes. It only lists successful gust detections by scouts at the following coordinates: (7.6, -0.4) (6.2, 1.7) (4.4\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 2,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 34.16,
+   "collisions": 0,
+   "gust_entries": 1,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 20 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of a \"red tower,\" hazards specifically between a home and that tower, or which routes failed. The context only contains data about gusts detec\"",
+    "courier recalled 20 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding: The location of a \"red tower\" (or any specific named tower). Which routes failed before. The only hazards recorded are gusts detected by scouts at the fol\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 3,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.68,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 22 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information about the location of a red tower, hazards between home and that tower, or any failed routes. The context only lists gust events detected by scouts at specific coordinate\"",
+    "courier recalled 22 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information about the location of a red tower or any failed routes. The only hazards listed are gusts detected by scouts at coordinates (7.6, -0.4), (2.2, 0.1), (6.2, 1.7), (4.4, 4.5\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 4,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.64,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 23 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context: 1. Where is the red tower? The provided context does not contain any information regarding the location of a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? S\"",
+    "courier recalled 23 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"1. Where is the red tower? The provided context does not contain any information regarding a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? Since the locations of \"home\" and the \"red tower\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 5,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.6,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 24 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower,\" specific hazards lying between \"home\" and that tower, or which routes failed before. The context only lists various gust detectio\"",
+    "courier recalled 24 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" or which routes failed before. The only hazards listed are gusts detected by scout-1 and scout-2 at coordinates: (7.6, -0.4), (2.2\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 6,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.6,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 25 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context: 1. Where is the red tower? The context does not contain any information regarding a \"red tower.\" It only lists gust hazards detected by scout-1 and scout-2 at specific coordinates. 2. What \"",
+    "courier recalled 25 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"1. Where is the red tower? The provided context does not contain any information regarding a \"red tower.\" It only lists gust hazards detected by scout-1 and scout-2 at specific coordinates. 2. What hazards such as gusts \"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 7,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.6,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 26 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"1. Where is the red tower? The provided context does not contain any information regarding a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? Since the location of the red tower is not speci\"",
+    "courier recalled 26 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"1. Where is the red tower? The provided context does not contain any information regarding a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? Since the location of the red tower is not speci\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 8,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.64,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 27 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information about the location of a \"red tower,\" specific hazards between home and that tower, or which routes failed. The context only lists various gust events detected by scouts a\"",
+    "courier recalled 27 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information about the location of a \"red tower\" (or any other specific destination), nor does it indicate which routes failed. It only lists several gust hazards detected by scouts a\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 9,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.68,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 28 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of a \"red tower,\" specific hazards between home and that tower, or which routes failed before. The context only lists gust events detected by \"",
+    "courier recalled 28 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information about the location of a \"red tower,\" specific hazards between home and that tower, or which routes failed. The context only lists gust events detected by scout-1 and scou\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 10,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.56,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 29 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding a \"red tower,\" its location, or any failed routes. The context only contains data about gust hazards detected by scouts at specific coordinates and times.\"",
+    "courier recalled 29 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context contains no information regarding the location of a \"red tower\" or any failed routes. The only hazards listed are gusts detected by scouts at the following coordinates: (7.6, -0.4) (6.2, 1.7) (4.4, 4\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 11,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.76,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 30 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" or which routes failed. The only hazards listed are gusts detected by scouts at the following coordinates: (5.0, 3.9) (4.4, 4.5) (\"",
+    "courier recalled 30 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" or which routes failed. The only hazards listed are gusts detected by scouts at the following coordinates: (7.6, -0.4) (2.2, 0.1) \"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 12,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.64,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 31 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a red tower, specific hazards between home and the red tower, or which routes failed. It only lists gust hazards detected by scouts at the follo\"",
+    "courier recalled 31 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a red tower or which routes failed. It only lists gust hazards detected by scouts at the following coordinates: (7.6, -0.4) (6.2, 1.7) (4.4, 4.5\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 13,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.68,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 32 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of the \"red tower,\" specific hazards lying between home and a red tower, or which routes failed before. The context only lists several gust ha\"",
+    "courier recalled 32 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of the \"red tower\" (or any specific destination indicated by the question mark) or which routes failed before. It only lists gust hazards detected \"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 14,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.48,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 33 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context: 1. Where is the red tower? The context does not contain any information regarding a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? Since the location of the \"",
+    "courier recalled 33 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"1. Where is the red tower? The context does not contain any information regarding a \"red tower.\" 2. What hazards such as gusts lie between home and the red tower? Since the location of the red tower is not specified, the\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 15,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.6,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 34 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of a \"red tower\" or any failed routes. The context only contains data about gust hazards detected by scouts at various coordinates.\"",
+    "courier recalled 34 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of a \"red tower\" (or any specific destination) or any failed routes. The context only contains data about gust hazards detected by scouts at v\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 16,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.68,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 35 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context: 1. Red Tower Location: There is no information regarding the location of a \"red tower\" in the knowledge graph. 2. Hazards (Gusts): The following gust hazards were detected by scouts at thes\"",
+    "courier recalled 35 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding the location of a \"red tower\" or which specific routes failed. The text only details gust hazards detected by scouts at the following coordinates: (7.6, -0\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 17,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.68,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 36 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding: 1. The location of a \"red tower.\" 2. A \"home\" location to determine routes between home and a red tower. 3. Any failed routes. The context only contains d\"",
+    "courier recalled 36 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding: 1. The location of a \"red tower\" (or any specific destination). 2. A \"home\" location to determine routes. 3. Any failed routes. The context only contains \"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 18,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.48,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 37 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding: 1. The location of a \"red tower.\" 2. The specific route between \"home\" and the red tower. 3. Which routes have failed previously. The context only contain\"",
+    "courier recalled 37 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"Based on the provided context, there is no information regarding: 1. The location of a \"red tower\" (or any specific destination implied by the missing word in the question). 2. Which routes have failed previously. The co\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  },
+  {
+   "seed": 19,
+   "success": true,
+   "delivered": true,
+   "mission_time_s": 21.6,
+   "collisions": 0,
+   "gust_entries": 0,
+   "pond_entries": 0,
+   "hazards_used": 1,
+   "log": [
+    "courier recalled 38 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" or which routes failed. It only lists various gust hazards detected by scouts at specific coordinates.\"",
+    "courier recalled 38 memories from swarm_map, outcomes, private_courier; 1 gust hazard(s) to avoid. Memory answer: \"The provided context does not contain information regarding the location of a \"red tower\" (or any specific destination) or which routes failed. It only lists gust hazards detected by scouts at coordinates: (7.6, -0.4) (2\"",
+    "courier replanned its next leg from memory (1 gust hazard(s))."
+   ]
+  }
+ ],
+ "wall_s": 727.6,
+ "memory_event_counts": {
+  "write": 36,
+  "read": 80,
+  "denied": 4,
+  "feedback": 20,
+  "improve": 21,
+  "error": 0
+ },
+ "denied_examples": [
+  {
+   "kind": "denied",
+   "user": "courier",
+   "dataset": "swarm_map",
+   "text": "courier felt a strong gust (disturbance 2.4 m/s) near (8.5, 6.5) at t=12s. [fact kind=hazard hazard=gust x=8.5 y=6.5 r=3.0 by=courier id=f13]",
+   "ok": false,
+   "t": 1794084460.640011,
+   "meta": {
+    "reason": "PermissionDeniedError: Request owner does not have necessary permission: [write] for all datasets requested. (Status code: 403)"
+   }
+  },
+  {
+   "kind": "denied",
+   "user": "courier",
+   "dataset": "swarm_map",
+   "text": "courier felt a strong gust (disturbance 3.0 m/s) near (11.0, 6.2) at t=19s. [fact kind=hazard hazard=gust x=11.0 y=6.2 r=3.0 by=courier id=f14]",
+   "ok": false,
+   "t": 1794084462.9359481,
+   "meta": {
+    "reason": "PermissionDeniedError: Request owner does not have necessary permission: [write] for all datasets requested. (Status code: 403)"
+   }
+  },
+  {
+   "kind": "denied",
+   "user": "courier",
+   "dataset": "swarm_map",
+   "text": "courier felt a strong gust (disturbance 1.9 m/s) near (11.3, 7.1) at t=13s. [fact kind=hazard hazard=gust x=11.3 y=7.1 r=3.0 by=courier id=f16]",
+   "ok": false,
+   "t": 1794084488.824783,
+   "meta": {
+    "reason": "PermissionDeniedError: Request owner does not have necessary permission: [write] for all datasets requested. (Status code: 403)"
+   }
+  }
+ ],
+ "errors": []
+}
