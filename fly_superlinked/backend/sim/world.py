@@ -56,6 +56,7 @@ class Drone:
     in_gust: bool = False
     in_pond: bool = False
     disturb: float = 0.0
+    v_model: np.ndarray = field(default_factory=lambda: np.zeros(3))
     gust_detect_t: float = 0.0
     gust_reports: list = field(default_factory=list)
     trail: list = field(default_factory=list)
@@ -155,12 +156,16 @@ class World:
         wind = np.zeros(3)
         if arena.in_gust(d.pos[0], d.pos[1]) and d.pos[2] > 0.5:
             wind = self.wind + self.rng.normal(0, self.turb, 3) * np.array([1, 1, 0.3])
-        d.vel += (v_air + wind - d.vel) * min(1.0, dt / 0.35)
+        k = min(1.0, dt / 0.35)
+        d.vel += (v_air + wind - d.vel) * k
+        d.v_model += (v_air - d.v_model) * k          # the drone's own no-wind model of its response
         d.pos = d.pos + d.vel * dt
-        d.pos[0] = np.clip(d.pos[0], -arena.HALF, arena.HALF); d.pos[1] = np.clip(d.pos[1], -arena.HALF, arena.HALF)
+        for i, lim in ((0, arena.HALF), (1, arena.HALF)):   # arena walls: stop, do not slide
+            if abs(d.pos[i]) > lim:
+                d.pos[i] = np.sign(d.pos[i]) * lim; d.vel[i] = 0.0; d.v_model[i] = 0.0
         d.pos[2] = np.clip(d.pos[2], 0.15, arena.CEILING)
-        # disturbance estimate: how far the measured velocity departs from the commanded air velocity
-        d.disturb += (float(np.linalg.norm((d.vel - v_air)[:2])) - d.disturb) * min(1.0, dt / 0.3)
+        # wind estimate: measured velocity minus what the model predicts without wind (turns and escapes cancel out)
+        d.disturb += (float(np.linalg.norm((d.vel - d.v_model)[:2])) - d.disturb) * min(1.0, dt / 0.3)
 
     def _bookkeep(self, d):
         hit = arena.collide(d.pos)
@@ -182,7 +187,7 @@ class World:
         # gust sensing: sustained disturbance (the drone feels it; it never reads the arena's gust box)
         if d.active and d.disturb > 1.6:
             d.gust_detect_t += CTRL_DT
-            if d.gust_detect_t >= 0.5 and (not d.gust_reports or np.hypot(*(d.pos[:2] - d.gust_reports[-1][:2])) > 1.5):
+            if d.gust_detect_t >= 0.5 and (not d.gust_reports or np.hypot(*(d.pos[:2] - d.gust_reports[-1][:2])) > 2.5):
                 d.gust_reports.append(d.pos.copy())
                 self.events.append({"type": "gust_felt", "drone": d.name, "pos": d.pos.round(2).tolist(), "t": self.t,
                                     "disturbance": round(d.disturb, 2)})

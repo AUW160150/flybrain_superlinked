@@ -37,8 +37,17 @@ def _inside(p, c):
 
 
 def shortest_path(a, b, circles):
-    """Shortest collision-free polyline a -> b around circles. Endpoints inside a circle ignore it."""
-    active = [c for c in circles if not _inside(a, c) and not _inside(b, c)]
+    """Shortest collision-free polyline a -> b around circles. A circle that contains an endpoint is
+    shrunk to just exclude it (an obstacle the drone starts beside, or a hazard reaching over the goal),
+    so the rest of it is still avoided."""
+    active = []
+    for c in circles:
+        r = c[2]
+        for p in (a, b):
+            if _inside(p, (c[0], c[1], r)):
+                r = math.dist(p, c[:2]) - 0.3
+        if r > 0.5:
+            active.append((c[0], c[1], r, c[3]))
     nodes = [a, b]
     for c in active:
         for k in range(12):

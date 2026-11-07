@@ -157,10 +157,12 @@ class Swarm:
         dest = ", ".join(g[2].replace("_", " ") for g in goals if g[3] != "home")
         q = f"Where is the {dest}? What hazards such as gusts lie between home and the {dest}? Which routes failed before?"
         hits = await self.memory.recall("courier", q, datasets, session_id=self.session_id)
-        hz = hazards_from_recall(hits)
+        # hazards are recalled through their own node set so routine observations cannot crowd them out
+        hz_hits = await self.memory.recall("courier", "gust hazard wind felt correction", datasets, node_name=["hazard", "correction"])
+        hz = hazards_from_recall(hits + hz_hits)
         answer = next((h["text"] for h in hits if h.get("answer")), None)
         self.say(f"courier recalled {len([h for h in hits if not h.get('answer')])} memories from {', '.join(datasets)}; {len(hz)} gust hazard(s) to avoid."
-                 + (f' Memory answer: "{answer[:220]}"' if answer else ""))
+                 + (f' Memory answer: "{" ".join(answer.replace("*", "").split())[:220]}"' if answer else ""))
         return hz
 
     # ---------- flight ----------
@@ -243,10 +245,9 @@ class Swarm:
         o = res.data
         if o.landmark == "none":
             return
-        truth = "matches" if o.landmark in visible else "not in ground-truth view"
         text = (f"{n} saw the {o.landmark.replace('_', ' ')} {o.bearing}, {o.approx_distance}, from ({pos[0]:.1f}, {pos[1]:.1f}); hazard {o.hazard}. "
                 + make_tag(kind="observation", landmark=o.landmark, bearing=o.bearing, dist=o.approx_distance, hazard=o.hazard,
-                           x=round(float(pos[0]), 1), y=round(float(pos[1]), 1), by=n, id=new_fact_id(), check=truth.replace(" ", "_")))
+                           x=round(float(pos[0]), 1), y=round(float(pos[1]), 1), by=n, id=new_fact_id()))
         if n == "courier":
             await self.memory.write(n, "private_courier", text, ["observation", o.landmark])
         else:
@@ -308,7 +309,7 @@ class Swarm:
             if through and not any(math.hypot(p[0] - x, p[1] - y) < r for p in felt):
                 text = (f"Correction: the courier flew through ({x:.1f}, {y:.1f}) and felt no gust. "
                         + make_tag(kind="correction", hazard="gust", x=x, y=y, by="operator", id=new_fact_id()))
-                await self.memory.write("operator", "outcomes", text, ["correction"])
+                await self.memory.write("operator", "outcomes", text, ["correction", "hazard"])
 
     # ---------- misc ----------
     def _record_call(self, job, res):

@@ -45,6 +45,18 @@ With the FlyWorld 'go' current on DNp09 (0.15), stimulating one side of a visual
 - The walk-coupled turn bias is re-measured for each wiring with FlyWorld's procedure (go current alone, (left - right) / DNp09 rate), so the rewired circuit is not penalised by the real circuit's calibration.
 - The rewired control shuffles targets across the whole graph (degrees and each neuron's outgoing signed weights kept). The owner's Project 08 rewiring was class-preserving (role x side blocks); this one is stronger.
 
-## Final cognee and SIE configuration
+## Final cognee and SIE configuration (verified working 2026-11-07)
 
-Filled in once keys are available; see LOG.md.
+cognee 1.6.7, configured in `backend/memory/store.py` `configure_cognee_env()` before cognee is imported:
+
+| Setting | Value |
+|---|---|
+| `LLM_PROVIDER` / `LLM_MODEL` | `custom` / `openai/Qwen/Qwen3.8-27B-FP8` (from `models.yaml: memory_llm`) |
+| `LLM_ENDPOINT` | `https://api.superlinked.com/v1` (SIE's OpenAI-compatible chat) |
+| `LLM_MAX_COMPLETION_TOKENS` | 4096 (SIE chat models list an 8,192-token text window) |
+| `EMBEDDING_PROVIDER` / `EMBEDDING_MODEL` / `EMBEDDING_DIMENSIONS` | `openai_compatible` / `BAAI/bge-m3` / 1024 (SIE `/v1/embeddings`) |
+| `ENABLE_BACKEND_ACCESS_CONTROL` | `true` (per-user, per-dataset stores) |
+| `AUTO_FEEDBACK` | `false` (feedback is written explicitly after each mission) |
+| `SYSTEM_ROOT_DIRECTORY`, `DATA_ROOT_DIRECTORY` | `$DATA_DIR/cognee_system`, `$DATA_DIR/cognee_data` |
+
+Verified: scouts' writes to `swarm_map` succeed; the courier's write to `swarm_map` and its read of `private_scout-1` raise cognee's `PermissionDeniedError` (403); CHUNKS recall returns stored sentences with their fact tags; GRAPH_COMPLETION in a session produces an answer that `cognee.session.add_feedback` can score; `improve(dataset=outcomes, session_ids=[...])` completes. The whole memory stack runs on open models via SIE.

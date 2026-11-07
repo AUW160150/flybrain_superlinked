@@ -1,0 +1,29 @@
+# Render Blueprint: one Docker web service (API + WebSocket + built frontend) with a persistent disk.
+services:
+  - type: web
+    name: flybrain-swarm
+    runtime: docker
+    plan: starter            # free plan sleeps and has too little memory for torch + cognee
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    rootDir: fly_superlinked
+    healthCheckPath: /healthz
+    autoDeploy: true
+    branch: main
+    disk:
+      name: swarm-data
+      mountPath: /var/data
+      sizeGB: 2
+    envVars:
+      - key: SIE_API_KEY
+        sync: false
+      - key: SIE_BASE_URL
+        value: https://api.superlinked.com
+      - key: FRONTIER_PROVIDER
+        value: anthropic
+      - key: FRONTIER_API_KEY
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: MEMORY_BACKEND
+        value: cognee

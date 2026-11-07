@@ -95,17 +95,19 @@ class LocalBackend:
             raise PermissionError(f"{user} does not have permission to write to dataset: {dataset}")
         self.docs[dataset].append({"text": text, "user": user, "node_set": node_set or [], "t": time.time()})
 
-    async def recall(self, user, query, datasets, session_id=None):
+    async def recall(self, user, query, datasets, session_id=None, node_name=None):
         out = []
         for ds in datasets:
             if not can(user, ds, "read"):
                 raise PermissionError(f"{user} does not have permission to read dataset: {ds}")
             q = set(re.findall(r"[a-z_]+", query.lower()))
             for doc in self.docs[ds]:
+                if node_name and not set(node_name) & set(doc.get("node_set") or []):
+                    continue
                 score = len(q & set(re.findall(r"[a-z_]+", doc["text"].lower())))
                 out.append((score, ds, doc["text"]))
         out.sort(key=lambda x: -x[0])
-        return [{"dataset": ds, "text": t} for _, ds, t in out[:30]]
+        return [{"dataset": ds, "text": t} for _, ds, t in out[:60]]
 
     async def feedback(self, user, session_id, score, text):
         return False
@@ -194,8 +196,9 @@ class CogneeBackend:
             raise PermissionError(str(e)) from e
         self.texts[dataset].append({"text": text, "user": user})
 
-    async def recall(self, user, query, datasets, session_id=None):
-        """CHUNKS returns the stored sentences verbatim (with their fact tags) and makes no LLM call.
+    async def recall(self, user, query, datasets, session_id=None, node_name=None):
+        """CHUNKS returns the stored sentences verbatim (with their fact tags) and makes no LLM call;
+        node_name restricts it to a cognee node set (e.g. ["hazard"]).
         When a session is given, a GRAPH_COMPLETION answer is also produced in that session; it is
         shown in the UI and is what the post-mission feedback scores."""
         import cognee
@@ -203,7 +206,8 @@ class CogneeBackend:
         from cognee.modules.users.exceptions import PermissionDeniedError
         ids = [self.dataset_ids[d] for d in datasets]
         try:
-            res = await cognee.recall(query, SearchType.CHUNKS, dataset_ids=ids, user=self.users[user], top_k=30, auto_route=False)
+            kw = {"node_name": node_name} if node_name else {}
+            res = await cognee.recall(query, SearchType.CHUNKS, dataset_ids=ids, user=self.users[user], top_k=60, auto_route=False, **kw)
             answer = None
             if session_id:
                 ans = await cognee.recall(query, SearchType.GRAPH_COMPLETION, dataset_ids=ids, user=self.users[user],
@@ -307,10 +311,10 @@ class SwarmMemory:
             self._emit(MemEvent("error", user, dataset, text, ok=False, meta={"reason": f"{type(e).__name__}: {e}"[:200]}))
             return False
 
-    async def recall(self, user, query, datasets, session_id=None):
+    async def recall(self, user, query, datasets, session_id=None, node_name=None):
         try:
-            res = await self.backend.recall(user, query, datasets, session_id)
-            self._emit(MemEvent("read", user, ",".join(datasets), query, meta={"hits": len(res)}))
+            res = await self.backend.recall(user, query, datasets, session_id, node_name)
+            self._emit(MemEvent("read", user, ",".join(datasets), query, meta={"hits": len(res), "node_name": node_name}))
             return res
         except PermissionError as e:
             self._emit(MemEvent("denied", user, ",".join(datasets), query, ok=False, meta={"reason": str(e)[:200]}))
