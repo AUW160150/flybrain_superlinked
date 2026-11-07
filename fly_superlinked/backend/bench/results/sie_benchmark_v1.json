@@ -1,0 +1,4456 @@
+{
+ "generated": "2026-11-07 11:59:09",
+ "precomputed": true,
+ "notes": [
+  "Mission gold plans are hand-written (bench/missions.jsonl). With 'scouts_joint', the two scouts' survey landmarks are scored as one set.",
+  "Keyframe labels come from simulator geometry (dominant landmark by ommatidium count, bearing from its mean azimuth, distance from nearest depth, pond pixels for 'water').",
+  "Costs are measured tokens from each API's usage field times published list prices in backend/config/prices.yaml.",
+  "Frontier calls use structured output and effort 'low'; thinking tokens, if any, are billed as output and included."
+ ],
+ "prices": {
+  "sie": {
+   "source": "https://superlinked.com/models (SIE Serverless list prices)",
+   "Qwen/Qwen3.5-4B": {
+    "input_per_mtok": 0.305,
+    "output_per_mtok": 1.53
+   },
+   "Qwen/Qwen3.8-27B-FP8": {
+    "input_per_mtok": 0.25,
+    "output_per_mtok": 2.75
+   },
+   "zai-org/GLM-5.3-Flash": {
+    "input_per_mtok": 0.15,
+    "output_per_mtok": 0.5
+   },
+   "google/siglip2-base-patch16-224": {
+    "input_per_mtok": 0.0231,
+    "per_1000_images": 0.0143
+   },
+   "google/siglip-so400m-patch14-384": {
+    "input_per_mtok": 0.031,
+    "per_1000_images": 0.0233
+   },
+   "BAAI/bge-m3": {
+    "input_per_mtok": 0.0377
+   }
+  },
+  "anthropic": {
+   "source": "https://docs.anthropic.com/en/docs/about-claude/pricing (first-party API list prices, cached 2026-10-06)",
+   "claude-opus-5-5": {
+    "input_per_mtok": 4.0,
+    "output_per_mtok": 20.0
+   },
+   "claude-sonnet-5-5": {
+    "input_per_mtok": 2.0,
+    "output_per_mtok": 10.0
+   },
+   "claude-haiku-5-5": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.5
+   }
+  },
+  "openai_compatible": {
+   "source": "set FRONTIER_PRICE_IN / FRONTIER_PRICE_OUT (USD per 1M tokens) with the provider's pricing URL in FRONTIER_PRICE_SOURCE"
+  }
+ },
+ "missions": 30,
+ "keyframes": 40,
+ "providers": {
+  "sie": {
+   "mission_planner": {
+    "model": "Qwen/Qwen3.5-4B",
+    "n": 30,
+    "valid_json_rate": 1.0,
+    "exact_match": 0.867,
+    "field_accuracy": 0.961,
+    "median_latency_s": 3.666,
+    "p90_latency_s": 8.041,
+    "mean_input_tokens": 631.5,
+    "mean_output_tokens": 110.4,
+    "cost_per_1000_calls_usd": 0.3615,
+    "items": [
+     {
+      "id": "m01",
+      "ok": true,
+      "error": "",
+      "latency_s": 11.735,
+      "in": 636,
+      "out": 270,
+      "cost_usd": 0.0006070800000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.7142857142857143,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m02",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.561,
+      "in": 625,
+      "out": 49,
+      "cost_usd": 0.00026559500000000003,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m03",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.756,
+      "in": 633,
+      "out": 65,
+      "cost_usd": 0.000292515,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m04",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.288,
+      "in": 627,
+      "out": 68,
+      "cost_usd": 0.00029527499999999995,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m05",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.946,
+      "in": 631,
+      "out": 71,
+      "cost_usd": 0.000301085,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m06",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.468,
+      "in": 628,
+      "out": 51,
+      "cost_usd": 0.00026957,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m07",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.626,
+      "in": 635,
+      "out": 94,
+      "cost_usd": 0.000337495,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m08",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.962,
+      "in": 633,
+      "out": 81,
+      "cost_usd": 0.000316995,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m09",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.706,
+      "in": 630,
+      "out": 69,
+      "cost_usd": 0.00029772,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m10",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.454,
+      "in": 633,
+      "out": 67,
+      "cost_usd": 0.000295575,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m11",
+      "ok": true,
+      "error": "",
+      "latency_s": 5.694,
+      "in": 619,
+      "out": 161,
+      "cost_usd": 0.000435125,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m12",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.673,
+      "in": 641,
+      "out": 94,
+      "cost_usd": 0.00033932499999999997,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m13",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.534,
+      "in": 634,
+      "out": 65,
+      "cost_usd": 0.00029282,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m14",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.851,
+      "in": 636,
+      "out": 89,
+      "cost_usd": 0.00033015,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_5",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m15",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.866,
+      "in": 625,
+      "out": 43,
+      "cost_usd": 0.000256415,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "red_tower"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m16",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.008,
+      "in": 638,
+      "out": 111,
+      "cost_usd": 0.00036442,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m17",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.04,
+      "in": 627,
+      "out": 51,
+      "cost_usd": 0.000269265,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m18",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.463,
+      "in": 635,
+      "out": 135,
+      "cost_usd": 0.00040022500000000004,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 10,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m19",
+      "ok": true,
+      "error": "",
+      "latency_s": 11.999,
+      "in": 619,
+      "out": 341,
+      "cost_usd": 0.0007105249999999999,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m20",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.564,
+      "in": 638,
+      "out": 84,
+      "cost_usd": 0.00032311,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m21",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.9,
+      "in": 630,
+      "out": 67,
+      "cost_usd": 0.00029466000000000003,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m22",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.782,
+      "in": 630,
+      "out": 50,
+      "cost_usd": 0.00026865,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m23",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.816,
+      "in": 631,
+      "out": 70,
+      "cost_usd": 0.000299555,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m24",
+      "ok": true,
+      "error": "",
+      "latency_s": 7.63,
+      "in": 632,
+      "out": 231,
+      "cost_usd": 0.0005461900000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m25",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.947,
+      "in": 629,
+      "out": 82,
+      "cost_usd": 0.000317305,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "green_tree_1"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m26",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.211,
+      "in": 633,
+      "out": 93,
+      "cost_usd": 0.000335355,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m27",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.928,
+      "in": 638,
+      "out": 84,
+      "cost_usd": 0.00032311,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m28",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.533,
+      "in": 632,
+      "out": 97,
+      "cost_usd": 0.00034116999999999996,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m29",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.558,
+      "in": 633,
+      "out": 80,
+      "cost_usd": 0.000315465,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "blue_arch"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m30",
+      "ok": true,
+      "error": "",
+      "latency_s": 11.826,
+      "in": 635,
+      "out": 398,
+      "cost_usd": 0.000802615,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.8571428571428571,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "perception": {
+    "model": "Qwen/Qwen3.5-4B",
+    "n": 40,
+    "valid_json_rate": 1.0,
+    "exact_match": 0.0,
+    "field_accuracy": 0.506,
+    "median_latency_s": 1.906,
+    "p90_latency_s": 2.945,
+    "mean_input_tokens": 413.9,
+    "mean_output_tokens": 23.0,
+    "cost_per_1000_calls_usd": 0.1615,
+    "items": [
+     {
+      "id": "kf00.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.934,
+      "in": 412,
+      "out": 23,
+      "cost_usd": 0.00016085,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf01.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.318,
+      "in": 415,
+      "out": 22,
+      "cost_usd": 0.00016023500000000003,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf02.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.403,
+      "in": 414,
+      "out": 24,
+      "cost_usd": 0.00016299,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf03.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.861,
+      "in": 412,
+      "out": 22,
+      "cost_usd": 0.00015931999999999999,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.0,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf04.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.227,
+      "in": 415,
+      "out": 23,
+      "cost_usd": 0.000161765,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf05.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.009,
+      "in": 415,
+      "out": 23,
+      "cost_usd": 0.000161765,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf06.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.555,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "far",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf07.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.046,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf08.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.768,
+      "in": 414,
+      "out": 24,
+      "cost_usd": 0.00016299,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf09.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.087,
+      "in": 415,
+      "out": 23,
+      "cost_usd": 0.000161765,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "far",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf10.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.236,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf11.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.903,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf12.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.331,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf13.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.667,
+      "in": 415,
+      "out": 24,
+      "cost_usd": 0.00016329500000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "obstacle"
+      }
+     },
+     {
+      "id": "kf14.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.319,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf15.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.321,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf16.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.469,
+      "in": 414,
+      "out": 24,
+      "cost_usd": 0.00016299,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf17.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.455,
+      "in": 415,
+      "out": 24,
+      "cost_usd": 0.00016329500000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf18.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.589,
+      "in": 415,
+      "out": 23,
+      "cost_usd": 0.000161765,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf19.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.575,
+      "in": 414,
+      "out": 22,
+      "cost_usd": 0.00015993,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "right",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf20.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.531,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf21.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.616,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf22.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.269,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf23.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.064,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf24.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.007,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf25.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.287,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf26.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.006,
+      "in": 415,
+      "out": 22,
+      "cost_usd": 0.00016023500000000003,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf27.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 0.931,
+      "in": 415,
+      "out": 24,
+      "cost_usd": 0.00016329500000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf28.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.917,
+      "in": 415,
+      "out": 22,
+      "cost_usd": 0.00016023500000000003,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf29.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.51,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf30.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.489,
+      "in": 415,
+      "out": 23,
+      "cost_usd": 0.000161765,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "left",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf31.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.295,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf32.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.413,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf33.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.896,
+      "in": 412,
+      "out": 23,
+      "cost_usd": 0.00016085,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf34.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.011,
+      "in": 415,
+      "out": 24,
+      "cost_usd": 0.00016329500000000001,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf35.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.415,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf36.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.33,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf37.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.706,
+      "in": 414,
+      "out": 23,
+      "cost_usd": 0.00016146,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf38.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.482,
+      "in": 416,
+      "out": 22,
+      "cost_usd": 0.00016054,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf39.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.345,
+      "in": 413,
+      "out": 23,
+      "cost_usd": 0.000161155,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     }
+    ],
+    "landmark_family": 0.6,
+    "landmark_ok": 0.45,
+    "bearing_ok": 0.5,
+    "approx_distance_ok": 0.45,
+    "hazard_ok": 0.625
+   }
+  },
+  "frontier": {
+   "mission_planner": {
+    "model": "claude-opus-5-5",
+    "n": 30,
+    "valid_json_rate": 1.0,
+    "exact_match": 0.967,
+    "field_accuracy": 0.992,
+    "median_latency_s": 2.181,
+    "p90_latency_s": 5.727,
+    "mean_input_tokens": 1335.9,
+    "mean_output_tokens": 145.8,
+    "cost_per_1000_calls_usd": 8.2589,
+    "items": [
+     {
+      "id": "m01",
+      "ok": true,
+      "error": "",
+      "latency_s": 6.89,
+      "in": 1340,
+      "out": 516,
+      "cost_usd": 0.01568,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m02",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.722,
+      "in": 1326,
+      "out": 59,
+      "cost_usd": 0.006484,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m03",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.745,
+      "in": 1341,
+      "out": 78,
+      "cost_usd": 0.006924,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m04",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.847,
+      "in": 1328,
+      "out": 79,
+      "cost_usd": 0.006892,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m05",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.84,
+      "in": 1332,
+      "out": 82,
+      "cost_usd": 0.006968,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m06",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.389,
+      "in": 1328,
+      "out": 60,
+      "cost_usd": 0.006512,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m07",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.371,
+      "in": 1346,
+      "out": 112,
+      "cost_usd": 0.007624,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m08",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.006,
+      "in": 1337,
+      "out": 95,
+      "cost_usd": 0.007248,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m09",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.628,
+      "in": 1333,
+      "out": 79,
+      "cost_usd": 0.006912,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m10",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.003,
+      "in": 1335,
+      "out": 80,
+      "cost_usd": 0.00694,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m11",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.309,
+      "in": 1317,
+      "out": 198,
+      "cost_usd": 0.009228,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m12",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.617,
+      "in": 1349,
+      "out": 112,
+      "cost_usd": 0.007636,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m13",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.518,
+      "in": 1338,
+      "out": 75,
+      "cost_usd": 0.006852,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m14",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.518,
+      "in": 1339,
+      "out": 103,
+      "cost_usd": 0.007416,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_5",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m15",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.46,
+      "in": 1330,
+      "out": 78,
+      "cost_usd": 0.00688,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "red_tower"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m16",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.949,
+      "in": 1346,
+      "out": 131,
+      "cost_usd": 0.008004,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m17",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.839,
+      "in": 1329,
+      "out": 60,
+      "cost_usd": 0.006516,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m18",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.918,
+      "in": 1345,
+      "out": 160,
+      "cost_usd": 0.00858,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 10,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m19",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.606,
+      "in": 1319,
+      "out": 236,
+      "cost_usd": 0.009996,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m20",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.692,
+      "in": 1344,
+      "out": 98,
+      "cost_usd": 0.007336,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m21",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.945,
+      "in": 1334,
+      "out": 79,
+      "cost_usd": 0.006916,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "survey"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m22",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.259,
+      "in": 1334,
+      "out": 58,
+      "cost_usd": 0.006496,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m23",
+      "ok": true,
+      "error": "",
+      "latency_s": 9.681,
+      "in": 1335,
+      "out": 81,
+      "cost_usd": 0.00696,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_4",
+           "action": "visit"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m24",
+      "ok": true,
+      "error": "",
+      "latency_s": 6.667,
+      "in": 1334,
+      "out": 607,
+      "cost_usd": 0.017476,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        },
+        {
+         "drone": "courier",
+         "goals": [],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m25",
+      "ok": true,
+      "error": "",
+      "latency_s": 5.623,
+      "in": 1338,
+      "out": 99,
+      "cost_usd": 0.007332,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "yellow_cubes",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "green_tree_1"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m26",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.9,
+      "in": 1340,
+      "out": 107,
+      "cost_usd": 0.0075,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m27",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.589,
+      "in": 1345,
+      "out": 100,
+      "cost_usd": 0.00738,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "visit"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m28",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.343,
+      "in": 1335,
+      "out": 112,
+      "cost_usd": 0.00758,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_3",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        }
+       ]
+      }
+     },
+     {
+      "id": "m29",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.052,
+      "in": 1336,
+      "out": 95,
+      "cost_usd": 0.007244,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 4,
+      "pred": {
+       "drones": [
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "red_tower",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "blue_arch"
+          },
+          {
+           "type": "avoid",
+           "zone": "pond"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "m30",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.556,
+      "in": 1344,
+      "out": 544,
+      "cost_usd": 0.016256,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "n_fields": 7,
+      "pred": {
+       "drones": [
+        {
+         "drone": "scout-1",
+         "goals": [
+          {
+           "landmark": "green_tree_1",
+           "action": "survey"
+          },
+          {
+           "landmark": "blue_arch",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_2",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "scout-2",
+         "goals": [
+          {
+           "landmark": "green_tree_5",
+           "action": "survey"
+          },
+          {
+           "landmark": "red_tower",
+           "action": "survey"
+          },
+          {
+           "landmark": "green_tree_4",
+           "action": "survey"
+          }
+         ],
+         "constraints": [],
+         "return_home": false
+        },
+        {
+         "drone": "courier",
+         "goals": [
+          {
+           "landmark": "blue_arch",
+           "action": "deliver"
+          }
+         ],
+         "constraints": [
+          {
+           "type": "avoid",
+           "zone": "gust_zone"
+          }
+         ],
+         "return_home": true
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "perception": {
+    "model": "claude-opus-5-5",
+    "n": 40,
+    "valid_json_rate": 1.0,
+    "exact_match": 0.3,
+    "field_accuracy": 0.575,
+    "median_latency_s": 3.67,
+    "p90_latency_s": 5.917,
+    "mean_input_tokens": 767.4,
+    "mean_output_tokens": 171.8,
+    "cost_per_1000_calls_usd": 6.5062,
+    "items": [
+     {
+      "id": "kf00.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.685,
+      "in": 766,
+      "out": 38,
+      "cost_usd": 0.003824,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "right",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf01.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.057,
+      "in": 768,
+      "out": 164,
+      "cost_usd": 0.006352,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf02.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 6.451,
+      "in": 768,
+      "out": 450,
+      "cost_usd": 0.012072,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf03.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.762,
+      "in": 768,
+      "out": 333,
+      "cost_usd": 0.009732,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf04.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 10.851,
+      "in": 766,
+      "out": 158,
+      "cost_usd": 0.006224,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf05.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.299,
+      "in": 768,
+      "out": 39,
+      "cost_usd": 0.003852,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "right",
+       "approx_distance": "far",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf06.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 9.918,
+      "in": 767,
+      "out": 130,
+      "cost_usd": 0.005668,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf07.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.819,
+      "in": 769,
+      "out": 202,
+      "cost_usd": 0.007116,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf08.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 5.871,
+      "in": 768,
+      "out": 204,
+      "cost_usd": 0.007152,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf09.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.398,
+      "in": 768,
+      "out": 183,
+      "cost_usd": 0.006732,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "right",
+       "approx_distance": "far",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf10.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.621,
+      "in": 766,
+      "out": 164,
+      "cost_usd": 0.006344,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf11.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.546,
+      "in": 767,
+      "out": 192,
+      "cost_usd": 0.006908,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf12.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.921,
+      "in": 769,
+      "out": 44,
+      "cost_usd": 0.003956,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf13.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 5.421,
+      "in": 767,
+      "out": 310,
+      "cost_usd": 0.009268,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "right",
+       "approx_distance": "near",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf14.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.813,
+      "in": 766,
+      "out": 147,
+      "cost_usd": 0.006004,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf15.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.077,
+      "in": 769,
+      "out": 151,
+      "cost_usd": 0.006096,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf16.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.017,
+      "in": 767,
+      "out": 158,
+      "cost_usd": 0.006228,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf17.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.187,
+      "in": 767,
+      "out": 250,
+      "cost_usd": 0.008068,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf18.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.22,
+      "in": 766,
+      "out": 124,
+      "cost_usd": 0.005544,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "behind",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf19.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 6.327,
+      "in": 767,
+      "out": 39,
+      "cost_usd": 0.003848,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "right",
+       "approx_distance": "near",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf20.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.329,
+      "in": 766,
+      "out": 161,
+      "cost_usd": 0.006284,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf21.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.294,
+      "in": 769,
+      "out": 198,
+      "cost_usd": 0.007036,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf22.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.411,
+      "in": 768,
+      "out": 181,
+      "cost_usd": 0.006692,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf23.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.261,
+      "in": 769,
+      "out": 287,
+      "cost_usd": 0.008816,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf24.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.102,
+      "in": 767,
+      "out": 249,
+      "cost_usd": 0.008048,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "behind",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf25.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.69,
+      "in": 767,
+      "out": 278,
+      "cost_usd": 0.008628,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "behind",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf26.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.725,
+      "in": 768,
+      "out": 129,
+      "cost_usd": 0.005652,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf27.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.314,
+      "in": 768,
+      "out": 211,
+      "cost_usd": 0.007292,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "far",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf28.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.194,
+      "in": 767,
+      "out": 40,
+      "cost_usd": 0.003868,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf29.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.578,
+      "in": 768,
+      "out": 131,
+      "cost_usd": 0.005692,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "water"
+      }
+     },
+     {
+      "id": "kf30.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 2.043,
+      "in": 768,
+      "out": 41,
+      "cost_usd": 0.003892,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf31.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.718,
+      "in": 768,
+      "out": 204,
+      "cost_usd": 0.007152,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf32.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.617,
+      "in": 766,
+      "out": 145,
+      "cost_usd": 0.005964,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.25,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf33.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.881,
+      "in": 767,
+      "out": 230,
+      "cost_usd": 0.007668,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.0,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf34.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.758,
+      "in": 768,
+      "out": 41,
+      "cost_usd": 0.003892,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.0,
+      "landmark_family": 1,
+      "landmark_ok": 0,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "green_tree_1",
+       "bearing": "right",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf35.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.736,
+      "in": 767,
+      "out": 121,
+      "cost_usd": 0.005488,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "left",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf36.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 1.93,
+      "in": 766,
+      "out": 41,
+      "cost_usd": 0.003884,
+      "attempts": 1,
+      "exact": 1,
+      "fields": 1.0,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf37.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.251,
+      "in": 769,
+      "out": 198,
+      "cost_usd": 0.007036,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 0,
+      "pred": {
+       "landmark": "yellow_cubes",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf38.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 3.576,
+      "in": 767,
+      "out": 225,
+      "cost_usd": 0.007568,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.5,
+      "landmark_family": 1,
+      "landmark_ok": 1,
+      "bearing_ok": 0,
+      "approx_distance_ok": 0,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "blue_arch",
+       "bearing": "behind",
+       "approx_distance": "medium",
+       "hazard": "none"
+      }
+     },
+     {
+      "id": "kf39.png",
+      "ok": true,
+      "error": "",
+      "latency_s": 4.404,
+      "in": 767,
+      "out": 282,
+      "cost_usd": 0.008708,
+      "attempts": 1,
+      "exact": 0,
+      "fields": 0.75,
+      "landmark_family": 0,
+      "landmark_ok": 0,
+      "bearing_ok": 1,
+      "approx_distance_ok": 1,
+      "hazard_ok": 1,
+      "pred": {
+       "landmark": "red_tower",
+       "bearing": "ahead",
+       "approx_distance": "medium",
+       "hazard": "water"
+      }
+     }
+    ],
+    "landmark_family": 0.525,
+    "landmark_ok": 0.425,
+    "bearing_ok": 0.6,
+    "approx_distance_ok": 0.575,
+    "hazard_ok": 0.7
+   },
+   "provider": "anthropic"
+  }
+ },
+ "place_recognition": {
+  "model": "google/siglip2-base-patch16-224",
+  "batch_size": 20,
+  "batch_latency_s": 1.42,
+  "dims": 768,
+  "cost_per_1000_images_usd": 0.0143
+ }
+}

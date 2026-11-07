@@ -129,6 +129,27 @@ class LocalBackend:
         return {"nodes": nodes, "edges": edges}
 
 
+def configure_cognee_env():
+    """Point cognee's LLM and embeddings at SIE's OpenAI-compatible API (open models only).
+    Must run before cognee is imported. Values already in the environment win."""
+    from pathlib import Path
+    from ..agents.llm import models
+    root = Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parents[2] / "var")).resolve()
+    base = os.environ.get("SIE_BASE_URL", "https://api.superlinked.com").rstrip("/") + "/v1"
+    key = os.environ.get("SIE_API_KEY", "")
+    env = {
+        "LLM_PROVIDER": "custom", "LLM_MODEL": "openai/" + models()["memory_llm"], "LLM_ENDPOINT": base, "LLM_API_KEY": key,
+        "LLM_MAX_COMPLETION_TOKENS": "4096", "COGNEE_SKIP_CONNECTION_TEST": "true",
+        "EMBEDDING_PROVIDER": "openai_compatible", "EMBEDDING_ENDPOINT": base, "EMBEDDING_MODEL": models()["memory_embedding"],
+        "EMBEDDING_DIMENSIONS": "1024", "EMBEDDING_API_KEY": key,
+        "ENABLE_BACKEND_ACCESS_CONTROL": "true", "AUTO_FEEDBACK": "false",
+        "SYSTEM_ROOT_DIRECTORY": str(root / "cognee_system"), "DATA_ROOT_DIRECTORY": str(root / "cognee_data"),
+    }
+    for k, v in env.items():
+        os.environ.setdefault(k, v)
+    return {k: (v if "KEY" not in k else "<set>") for k, v in env.items()}
+
+
 class CogneeBackend:
     name = "cognee"
 
@@ -138,6 +159,7 @@ class CogneeBackend:
         self.texts = {ds: [] for ds in POLICY}      # what was written, for the graph view's contributor colours
 
     async def setup(self):
+        self.config = configure_cognee_env()
         import cognee
         from cognee.modules.engine.operations.setup import setup
         from cognee.modules.users.methods import create_user, get_user_by_email
@@ -173,20 +195,59 @@ class CogneeBackend:
         self.texts[dataset].append({"text": text, "user": user})
 
     async def recall(self, user, query, datasets, session_id=None):
+        """CHUNKS returns the stored sentences verbatim (with their fact tags) and makes no LLM call.
+        When a session is given, a GRAPH_COMPLETION answer is also produced in that session; it is
+        shown in the UI and is what the post-mission feedback scores."""
         import cognee
         from cognee import SearchType
         from cognee.modules.users.exceptions import PermissionDeniedError
+        ids = [self.dataset_ids[d] for d in datasets]
         try:
-            res = await cognee.recall(query, SearchType.CHUNKS, dataset_ids=[self.dataset_ids[d] for d in datasets],
-                                      user=self.users[user], top_k=30, auto_route=False, session_id=session_id,
-                                      feedback_influence=0.5)
+            res = await cognee.recall(query, SearchType.CHUNKS, dataset_ids=ids, user=self.users[user], top_k=30, auto_route=False)
+            answer = None
+            if session_id:
+                ans = await cognee.recall(query, SearchType.GRAPH_COMPLETION, dataset_ids=ids, user=self.users[user],
+                                          auto_route=False, session_id=session_id, feedback_influence=0.5)
+                answer = " ".join(str(getattr(a, "text", "") or "") for a in ans[:1]).strip() or None
         except PermissionDeniedError as e:
             raise PermissionError(str(e)) from e
-        out = []
-        for r in res:
-            text = getattr(r, "text", None) or str(r)
-            out.append({"dataset": getattr(r, "dataset_name", "") or "", "text": text})
+        out = [{"dataset": getattr(r, "dataset_name", "") or "", "text": getattr(r, "text", None) or str(r)} for r in res]
+        if answer:
+            out.append({"dataset": "answer", "text": answer, "answer": True})
         return out
+
+    async def graph_async(self):
+        from cognee.context_global_variables import set_database_global_context_variables
+        from cognee.infrastructure.databases.graph import get_graph_engine
+        nodes, edges, seen = [], [], set()
+        for ds in ("swarm_map", "outcomes"):
+            try:
+                async with set_database_global_context_variables(self.dataset_ids[ds], self.users["operator"].id):
+                    engine = await get_graph_engine()
+                    ns, es = await engine.get_graph_data()
+            except Exception as e:
+                nodes.append({"id": f"error:{ds}", "label": f"{ds}: {type(e).__name__}", "dataset": ds, "by": "error"})
+                continue
+            for n in ns:
+                nid, props = (n[0], n[1]) if isinstance(n, (tuple, list)) else (getattr(n, "id", str(n)), getattr(n, "__dict__", {}))
+                props = props or {}
+                name = str(props.get("name") or props.get("text") or props.get("type") or nid)[:60]
+                ntype = str(props.get("type", ""))
+                if str(nid) in seen:
+                    continue
+                seen.add(str(nid))
+                nodes.append({"id": str(nid), "label": name, "type": ntype, "dataset": ds, "by": self._contributor(name, ds)})
+            for e in es:
+                src, dst, rel = (e[0], e[1], e[2]) if isinstance(e, (tuple, list)) else (e.source, e.target, getattr(e, "relationship_name", ""))
+                edges.append({"source": str(src), "target": str(dst), "label": str(rel)})
+        return {"nodes": nodes, "edges": edges, "source": "cognee graph (swarm_map + outcomes, read as operator)"}
+
+    def _contributor(self, name, ds):
+        low = name.lower()
+        for doc in reversed(self.texts.get(ds, [])):
+            if low and low in doc["text"].lower():
+                return doc["user"]
+        return "operator" if ds == "outcomes" else "shared"
 
     async def feedback(self, user, session_id, score, text):
         import cognee
@@ -273,8 +334,12 @@ class SwarmMemory:
         except Exception as e:
             self._emit(MemEvent("error", user, dataset, "improve", ok=False, meta={"reason": f"{type(e).__name__}: {e}"[:200]}))
 
-    def graph(self):
-        return self.backend.graph()
+    async def graph(self):
+        if hasattr(self.backend, "graph_async"):
+            return await self.backend.graph_async()
+        g = self.backend.graph()
+        g["source"] = self.backend.name
+        return g
 
 
 def new_fact_id():

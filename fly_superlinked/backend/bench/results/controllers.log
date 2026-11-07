@@ -1,0 +1,3 @@
+real {'n': 20, 'success_rate': 0.55, 'delivery_rate': 0.95, 'mean_time_to_goal_s': 52.941, 'mean_mission_time_s': 62.033, 'mean_collisions': 0.0, 'mean_gust_entries': 1.7, 'mean_pond_entries': 2.45, 'mean_escapes': 9.55}
+rewired {'n': 20, 'success_rate': 0.0, 'delivery_rate': 0.0, 'mean_time_to_goal_s': None, 'mean_mission_time_s': None, 'mean_collisions': 0.4, 'mean_gust_entries': 0.45, 'mean_pond_entries': 0.85, 'mean_escapes': 2.4}
+rewired_class {'n': 20, 'success_rate': 0.0, 'delivery_rate': 0.0, 'mean_time_to_goal_s': None, 'mean_mission_time_s': None, 'mean_collisions': 0.0, 'mean_gust_entries': 0.0, 'mean_pond_entries': 0.0, 'mean_escapes': 17.25}

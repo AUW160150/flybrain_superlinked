@@ -48,17 +48,29 @@ def place_xy(name):
     return arena.LANDMARK_BY_NAME[name].goal
 
 
-def hazards_from_recall(hits):
-    """Avoid-circles from recalled facts. Corrections remove hazards; confirmations raise confidence."""
-    hazards, removed = {}, set()
+def hazards_from_recall(hits, link_m=6.0, margin_m=3.0):
+    """Avoid-circles from recalled facts. Gust reports are points where a drone felt the wind; nearby
+    points (single linkage, link_m) are merged into one area hazard: a circle around their mean that
+    covers every point plus margin_m. Corrections remove reports near them."""
+    pts, corr = {}, []
     for h in hits:
         for tag in parse_tags(h["text"]):
             if tag.get("kind") == "hazard" and tag.get("hazard") == "gust":
-                key = (round(float(tag["x"]) / 2), round(float(tag["y"]) / 2))
-                hazards[key] = (float(tag["x"]), float(tag["y"]), float(tag.get("r", HAZARD_R)), "gust")
+                pts[(round(float(tag["x"]), 1), round(float(tag["y"]), 1))] = True
             if tag.get("kind") == "correction" and tag.get("hazard") == "gust":
-                removed.add((round(float(tag["x"]) / 2), round(float(tag["y"]) / 2)))
-    return [v for k, v in hazards.items() if k not in removed]
+                corr.append((float(tag["x"]), float(tag["y"])))
+    p = [q for q in pts if not any(math.hypot(q[0] - c[0], q[1] - c[1]) < 1.5 for c in corr)]
+    clusters = []
+    for q in p:
+        near = [c for c in clusters if any(math.hypot(q[0] - r[0], q[1] - r[1]) <= link_m for r in c)]
+        merged = [q] + [r for c in near for r in c]
+        clusters = [c for c in clusters if c not in near] + [merged]
+    out = []
+    for c in clusters:
+        cx = sum(r[0] for r in c) / len(c); cy = sum(r[1] for r in c) / len(c)
+        rad = max(math.hypot(r[0] - cx, r[1] - cy) for r in c) + margin_m
+        out.append((round(cx, 2), round(cy, 2), round(rad, 2), "gust"))
+    return out
 
 
 class Swarm:
@@ -80,6 +92,10 @@ class Swarm:
         self.outcome_written = False
         self.sie_calls = []               # CallResult summaries for live cost display
         self.remaining = {}
+        try:
+            self.loop = asyncio.get_running_loop()
+        except RuntimeError:
+            self.loop = None
 
     # ---------- planning ----------
     async def start_mission(self, text):
@@ -142,7 +158,9 @@ class Swarm:
         q = f"Where is the {dest}? What hazards such as gusts lie between home and the {dest}? Which routes failed before?"
         hits = await self.memory.recall("courier", q, datasets, session_id=self.session_id)
         hz = hazards_from_recall(hits)
-        self.say(f"courier recalled {len(hits)} memories from {', '.join(datasets)}; {len(hz)} gust hazard(s) to avoid.")
+        answer = next((h["text"] for h in hits if h.get("answer")), None)
+        self.say(f"courier recalled {len([h for h in hits if not h.get('answer')])} memories from {', '.join(datasets)}; {len(hz)} gust hazard(s) to avoid."
+                 + (f' Memory answer: "{answer[:220]}"' if answer else ""))
         return hz
 
     # ---------- flight ----------
@@ -168,13 +186,19 @@ class Swarm:
             self._spawn(self.finish_mission())
 
     def _spawn(self, coro):
+        """Schedule memory/model work on the app's event loop. The live server steps the sim in a worker
+        thread; cognee's clients belong to the main loop, so work is handed back to it thread-safely."""
         try:
             loop = asyncio.get_running_loop()
         except RuntimeError:
-            return asyncio.run(coro)
-        t = loop.create_task(coro)
-        self.tasks.add(t); t.add_done_callback(self.tasks.discard)
-        return t
+            loop = None
+        if loop is not None:
+            t = loop.create_task(coro)
+            self.tasks.add(t); t.add_done_callback(self.tasks.discard)
+            return t
+        if self.loop is not None:
+            return asyncio.run_coroutine_threadsafe(coro, self.loop)
+        return asyncio.run(coro)
 
     async def drain(self):
         while self.tasks:
@@ -223,7 +247,10 @@ class Swarm:
         text = (f"{n} saw the {o.landmark.replace('_', ' ')} {o.bearing}, {o.approx_distance}, from ({pos[0]:.1f}, {pos[1]:.1f}); hazard {o.hazard}. "
                 + make_tag(kind="observation", landmark=o.landmark, bearing=o.bearing, dist=o.approx_distance, hazard=o.hazard,
                            x=round(float(pos[0]), 1), y=round(float(pos[1]), 1), by=n, id=new_fact_id(), check=truth.replace(" ", "_")))
-        await self._share(n, text, ["observation", o.landmark])
+        if n == "courier":
+            await self.memory.write(n, "private_courier", text, ["observation", o.landmark])
+        else:
+            await self._share(n, text, ["observation", o.landmark])
 
     async def _place(self, n, png, pos):
         try:
@@ -238,7 +265,7 @@ class Swarm:
         if past:
             sims = np.array([float(u @ v) for _, _, u in past])
             i = int(np.argmax(sims))
-            if sims[i] > 0.93:
+            if sims[i] > 0.985:
                 err = float(np.linalg.norm(past[i][1][:2] - pos[:2]))
                 m = {"drone": n, "t": round(self.world.t, 1), "similarity": round(float(sims[i]), 3), "then_t": round(past[i][0], 1),
                      "then_pos": past[i][1][:2].round(1).tolist(), "now_pos": pos[:2].round(1).tolist(), "distance_m": round(err, 2)}

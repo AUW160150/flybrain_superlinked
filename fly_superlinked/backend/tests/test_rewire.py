@@ -31,3 +31,22 @@ def test_rewire_is_deterministic_for_a_seed():
     a = degree_preserving_rewire(pre, post, w, seed=7)
     b = degree_preserving_rewire(pre, post, w, seed=7)
     assert all(np.array_equal(x, y) for x, y in zip(a, b))
+
+
+def test_class_preserving_rewire_keeps_degrees_and_block_pairs():
+    c = load_circuit()
+    pre, post, w = circuit_edges("real")
+    rp, rq, rw = circuit_edges("rewired_class")
+    N = c["N"]
+    assert np.array_equal(np.bincount(pre, minlength=N), np.bincount(rp, minlength=N))
+    assert np.array_equal(np.bincount(post, minlength=N), np.bincount(rq, minlength=N))
+    block = np.char.add(np.char.add(c["superclass"].astype(str), ":"), c["side"].astype(str))
+    _, b = np.unique(block, return_inverse=True)
+    k = b.max() + 1
+    assert np.array_equal(np.bincount(b[pre] * k + b[post], minlength=k * k), np.bincount(b[rp] * k + b[rq], minlength=k * k))
+    assert not np.any(rp == rq)
+    key = rp.astype(np.int64) * 100000 + rq
+    # a few small, dense block pairs cannot avoid parallel edges; they act as summed weights
+    assert (len(key) - len(np.unique(key))) / len(key) < 0.001
+    kept = len(np.intersect1d(pre.astype(np.int64) * 100000 + post, key))
+    assert kept / len(key) < 0.5

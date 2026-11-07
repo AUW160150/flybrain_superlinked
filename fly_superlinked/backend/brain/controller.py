@@ -56,7 +56,7 @@ def raster_neurons(groups):
     out = []
     for name, k in RASTER_GROUPS:
         for i in groups.get(name, [])[:k]:
-            out.append((int(i), str(c["type"][i]), name.split("_")[-1] if name[-2:] in ("_L", "_R") else str(c["side"][i])))
+            out.append((int(i), str(c["type"][i]), name.split("_")[-1] if name[-2:] in ("_L", "_R") else str(c["side"][i]), name.split("_")[0]))
     return out
 
 
@@ -153,7 +153,7 @@ class Reactive:
             w = np.clip(w, 0, None)
             push = float(-np.sum(w * np.sign(eye.az[near])) / 25.0)    # obstacle on left (az>0) -> turn right
         yaw_rate = float(np.clip(2.0 * bearing_err + 2.5 * push, -YAW_MAX, YAW_MAX))
-        front = near & (np.abs(eye.az) < np.radians(25))
-        slow = 0.4 if front.sum() > 8 else 1.0
+        front = near & (np.abs(eye.az) < np.radians(20)) & (view["depth"] < 3.5)
+        slow = 0.5 if front.sum() > 8 else 1.0
         v = V_MAX * max(0.25, math.cos(min(abs(bearing_err), math.pi / 2))) * slow
         return {"yaw_rate": yaw_rate, "v": v, "escape": False, "escape_started": False, "escape_dir": 0.0}

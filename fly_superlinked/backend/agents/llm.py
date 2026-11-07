@@ -166,12 +166,10 @@ def _chat_once(provider, model, system, user_text, schema, schema_name, image_pn
 def embed_images(pngs, model=None):
     """SIE image embeddings (unit-normalised float32 vectors)."""
     import numpy as np
-    from PIL import Image
-    import io
     from sie_sdk.types import Item
     model = model or models()["place_embedding"]
     t0 = time.time()
-    items = [Item(images=[{"data": Image.open(io.BytesIO(p)).convert("RGB"), "format": "png"}]) for p in pngs]
+    items = [Item(images=[{"data": p, "format": "png"}]) for p in pngs]
     res = sie_client().encode(model, items)
     res = res if isinstance(res, list) else [res]
     vecs = np.stack([np.asarray(r["dense"], dtype=np.float32) for r in res])

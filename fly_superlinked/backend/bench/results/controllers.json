@@ -1,0 +1,1156 @@
+{
+ "task": "courier: home -> red tower -> home; pond avoided by route; hidden gust zone; 120 s limit",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "tuning_seeds_excluded": [
+  100,
+  101,
+  102
+ ],
+ "generated": "2026-11-07 12:06:26",
+ "precomputed": true,
+ "arms": {
+  "rewired_class": {
+   "summary": {
+    "n": 20,
+    "success_rate": 0.0,
+    "delivery_rate": 0.0,
+    "mean_time_to_goal_s": null,
+    "mean_mission_time_s": null,
+    "mean_collisions": 0.0,
+    "mean_gust_entries": 0.0,
+    "mean_pond_entries": 0.0,
+    "mean_escapes": 17.25
+   },
+   "runs": [
+    {
+     "seed": 0,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 16,
+     "path_m": 94.9
+    },
+    {
+     "seed": 1,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 13,
+     "path_m": 91.6
+    },
+    {
+     "seed": 2,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 17,
+     "path_m": 92.8
+    },
+    {
+     "seed": 3,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 17,
+     "path_m": 93.1
+    },
+    {
+     "seed": 4,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 17,
+     "path_m": 94.5
+    },
+    {
+     "seed": 5,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 18,
+     "path_m": 94.9
+    },
+    {
+     "seed": 6,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 18,
+     "path_m": 92.5
+    },
+    {
+     "seed": 7,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 15,
+     "path_m": 92.0
+    },
+    {
+     "seed": 8,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 17,
+     "path_m": 92.9
+    },
+    {
+     "seed": 9,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 14,
+     "path_m": 93.3
+    },
+    {
+     "seed": 10,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 19,
+     "path_m": 94.4
+    },
+    {
+     "seed": 11,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 28,
+     "path_m": 137.6
+    },
+    {
+     "seed": 12,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 23,
+     "path_m": 121.4
+    },
+    {
+     "seed": 13,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 18,
+     "path_m": 92.0
+    },
+    {
+     "seed": 14,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 15,
+     "path_m": 90.6
+    },
+    {
+     "seed": 15,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 17,
+     "path_m": 94.7
+    },
+    {
+     "seed": 16,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 16,
+     "path_m": 92.9
+    },
+    {
+     "seed": 17,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 16,
+     "path_m": 89.8
+    },
+    {
+     "seed": 18,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 16,
+     "path_m": 93.7
+    },
+    {
+     "seed": 19,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 15,
+     "path_m": 93.9
+    }
+   ],
+   "wall_s": 279.3
+  },
+  "real": {
+   "summary": {
+    "n": 20,
+    "success_rate": 0.75,
+    "delivery_rate": 0.95,
+    "mean_time_to_goal_s": 43.436,
+    "mean_mission_time_s": 61.96,
+    "mean_collisions": 0.0,
+    "mean_gust_entries": 2.0,
+    "mean_pond_entries": 2.1,
+    "mean_escapes": 7.95
+   },
+   "runs": [
+    {
+     "seed": 0,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 56.24,
+     "mission_time_s": 115.76,
+     "collisions": 0,
+     "gust_entries": 1,
+     "pond_entries": 7,
+     "escapes": 5,
+     "path_m": 356.4
+    },
+    {
+     "seed": 1,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 16.04,
+     "mission_time_s": 40.28,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 2,
+     "escapes": 5,
+     "path_m": 137.5
+    },
+    {
+     "seed": 2,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 19.64,
+     "mission_time_s": 64.52,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 4,
+     "escapes": 3,
+     "path_m": 218.8
+    },
+    {
+     "seed": 3,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 16.16,
+     "mission_time_s": 72.52,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 4,
+     "escapes": 6,
+     "path_m": 266.5
+    },
+    {
+     "seed": 4,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 71.96,
+     "mission_time_s": 81.12,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 11,
+     "path_m": 159.6
+    },
+    {
+     "seed": 5,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 15.0,
+     "mission_time_s": 24.24,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 2,
+     "escapes": 4,
+     "path_m": 87.9
+    },
+    {
+     "seed": 6,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.8,
+     "mission_time_s": 27.64,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 0,
+     "escapes": 5,
+     "path_m": 103.3
+    },
+    {
+     "seed": 7,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 19.64,
+     "mission_time_s": 28.84,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 7,
+     "path_m": 101.1
+    },
+    {
+     "seed": 8,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 18.48,
+     "mission_time_s": 48.44,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 3,
+     "escapes": 5,
+     "path_m": 171.8
+    },
+    {
+     "seed": 9,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.84,
+     "mission_time_s": 18.72,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 3,
+     "path_m": 69.8
+    },
+    {
+     "seed": 10,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 77.76,
+     "mission_time_s": 87.88,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 2,
+     "escapes": 9,
+     "path_m": 264.8
+    },
+    {
+     "seed": 11,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.2,
+     "mission_time_s": 19.24,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 4,
+     "path_m": 68.8
+    },
+    {
+     "seed": 12,
+     "success": false,
+     "delivered": true,
+     "time_to_goal_s": 9.64,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 4,
+     "escapes": 7,
+     "path_m": 305.8
+    },
+    {
+     "seed": 13,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 15.64,
+     "mission_time_s": 113.76,
+     "collisions": 0,
+     "gust_entries": 4,
+     "pond_entries": 2,
+     "escapes": 14,
+     "path_m": 310.8
+    },
+    {
+     "seed": 14,
+     "success": false,
+     "delivered": true,
+     "time_to_goal_s": 119.64,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 13,
+     "path_m": 267.9
+    },
+    {
+     "seed": 15,
+     "success": false,
+     "delivered": true,
+     "time_to_goal_s": 92.0,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 3,
+     "escapes": 11,
+     "path_m": 288.4
+    },
+    {
+     "seed": 16,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 87.84,
+     "mission_time_s": 110.0,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 1,
+     "escapes": 13,
+     "path_m": 239.0
+    },
+    {
+     "seed": 17,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 42.4,
+     "mission_time_s": 76.44,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 2,
+     "escapes": 12,
+     "path_m": 249.1
+    },
+    {
+     "seed": 18,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 6,
+     "path_m": 104.9
+    },
+    {
+     "seed": 19,
+     "success": false,
+     "delivered": true,
+     "time_to_goal_s": 118.36,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 16,
+     "path_m": 257.6
+    }
+   ],
+   "wall_s": 177.6
+  },
+  "rewired": {
+   "summary": {
+    "n": 20,
+    "success_rate": 0.0,
+    "delivery_rate": 0.0,
+    "mean_time_to_goal_s": null,
+    "mean_mission_time_s": null,
+    "mean_collisions": 0.45,
+    "mean_gust_entries": 0.5,
+    "mean_pond_entries": 0.85,
+    "mean_escapes": 2.4
+   },
+   "runs": [
+    {
+     "seed": 0,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 2,
+     "path_m": 49.9
+    },
+    {
+     "seed": 1,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 2,
+     "path_m": 51.0
+    },
+    {
+     "seed": 2,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 4,
+     "path_m": 78.8
+    },
+    {
+     "seed": 3,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 1,
+     "pond_entries": 1,
+     "escapes": 4,
+     "path_m": 92.4
+    },
+    {
+     "seed": 4,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 2,
+     "path_m": 59.3
+    },
+    {
+     "seed": 5,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 3,
+     "path_m": 60.9
+    },
+    {
+     "seed": 6,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 1,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 51.0
+    },
+    {
+     "seed": 7,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 2,
+     "path_m": 60.7
+    },
+    {
+     "seed": 8,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 1,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 57.0
+    },
+    {
+     "seed": 9,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 51.2
+    },
+    {
+     "seed": 10,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 52.2
+    },
+    {
+     "seed": 11,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 9,
+     "path_m": 51.7
+    },
+    {
+     "seed": 12,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 3,
+     "path_m": 65.8
+    },
+    {
+     "seed": 13,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 6,
+     "path_m": 64.4
+    },
+    {
+     "seed": 14,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 1,
+     "pond_entries": 1,
+     "escapes": 1,
+     "path_m": 53.8
+    },
+    {
+     "seed": 15,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 3,
+     "path_m": 47.4
+    },
+    {
+     "seed": 16,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 0,
+     "escapes": 4,
+     "path_m": 47.1
+    },
+    {
+     "seed": 17,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 52.3
+    },
+    {
+     "seed": 18,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 0,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 1,
+     "path_m": 53.5
+    },
+    {
+     "seed": 19,
+     "success": false,
+     "delivered": false,
+     "time_to_goal_s": null,
+     "mission_time_s": null,
+     "collisions": 1,
+     "gust_entries": 0,
+     "pond_entries": 1,
+     "escapes": 2,
+     "path_m": 51.1
+    }
+   ],
+   "wall_s": 251.6
+  },
+  "reactive": {
+   "summary": {
+    "n": 20,
+    "success_rate": 1.0,
+    "delivery_rate": 1.0,
+    "mean_time_to_goal_s": 9.206,
+    "mean_mission_time_s": 17.706,
+    "mean_collisions": 0.0,
+    "mean_gust_entries": 2.1,
+    "mean_pond_entries": 1.0,
+    "mean_escapes": 0.0
+   },
+   "runs": [
+    {
+     "seed": 0,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.16,
+     "mission_time_s": 17.52,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 65.5
+    },
+    {
+     "seed": 1,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.68,
+     "mission_time_s": 18.04,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.5
+    },
+    {
+     "seed": 2,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.2,
+     "mission_time_s": 17.44,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.2
+    },
+    {
+     "seed": 3,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.12,
+     "mission_time_s": 17.68,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.1
+    },
+    {
+     "seed": 4,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.32,
+     "mission_time_s": 17.52,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.7
+    },
+    {
+     "seed": 5,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.32,
+     "mission_time_s": 17.92,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.7
+    },
+    {
+     "seed": 6,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.0,
+     "mission_time_s": 17.4,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.6
+    },
+    {
+     "seed": 7,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.2,
+     "mission_time_s": 17.64,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.9
+    },
+    {
+     "seed": 8,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.08,
+     "mission_time_s": 17.8,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 68.2
+    },
+    {
+     "seed": 9,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.08,
+     "mission_time_s": 17.64,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.9
+    },
+    {
+     "seed": 10,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.44,
+     "mission_time_s": 18.04,
+     "collisions": 0,
+     "gust_entries": 3,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.3
+    },
+    {
+     "seed": 11,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.2,
+     "mission_time_s": 17.84,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.6
+    },
+    {
+     "seed": 12,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.28,
+     "mission_time_s": 17.64,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.6
+    },
+    {
+     "seed": 13,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.16,
+     "mission_time_s": 17.68,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.3
+    },
+    {
+     "seed": 14,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 8.84,
+     "mission_time_s": 17.56,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 68.3
+    },
+    {
+     "seed": 15,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.4,
+     "mission_time_s": 18.16,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 67.7
+    },
+    {
+     "seed": 16,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.32,
+     "mission_time_s": 17.64,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.7
+    },
+    {
+     "seed": 17,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 8.88,
+     "mission_time_s": 17.36,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.5
+    },
+    {
+     "seed": 18,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.36,
+     "mission_time_s": 18.0,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.7
+    },
+    {
+     "seed": 19,
+     "success": true,
+     "delivered": true,
+     "time_to_goal_s": 9.08,
+     "mission_time_s": 17.6,
+     "collisions": 0,
+     "gust_entries": 2,
+     "pond_entries": 1,
+     "escapes": 0,
+     "path_m": 66.1
+    }
+   ],
+   "wall_s": 10.3
+  }
+ },
+ "arm_notes": {
+  "real": "MaleCNS FlyWorld sub-circuit as wired",
+  "rewired": "targets shuffled across the whole graph; in/out degree and outgoing weights kept",
+  "rewired_class": "targets shuffled within superclass x side block pairs (Project 08 style); degrees kept",
+  "reactive": "hand-written steer-to-target with obstacle repulsion"
+ },
+ "comparisons": {
+  "real_minus_rewired_class": {
+   "success": {
+    "diff": 0.75,
+    "ci95": [
+     0.55,
+     0.9
+    ]
+   },
+   "delivered": {
+    "diff": 0.95,
+    "ci95": [
+     0.85,
+     1.0
+    ]
+   },
+   "collisions": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gust_entries": {
+    "diff": 2.0,
+    "ci95": [
+     1.5,
+     2.45
+    ]
+   }
+  },
+  "real_minus_rewired": {
+   "success": {
+    "diff": 0.75,
+    "ci95": [
+     0.55,
+     0.9
+    ]
+   },
+   "delivered": {
+    "diff": 0.95,
+    "ci95": [
+     0.85,
+     1.0
+    ]
+   },
+   "collisions": {
+    "diff": -0.45,
+    "ci95": [
+     -0.65,
+     -0.25
+    ]
+   },
+   "gust_entries": {
+    "diff": 1.5,
+    "ci95": [
+     0.95,
+     2.0
+    ]
+   }
+  },
+  "real_minus_reactive": {
+   "success": {
+    "diff": -0.25,
+    "ci95": [
+     -0.45,
+     -0.1
+    ]
+   },
+   "delivered": {
+    "diff": -0.05,
+    "ci95": [
+     -0.15,
+     0.0
+    ]
+   },
+   "collisions": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gust_entries": {
+    "diff": -0.1,
+    "ci95": [
+     -0.6,
+     0.4
+    ]
+   }
+  }
+ }
+}

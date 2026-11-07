@@ -16,6 +16,7 @@ CTRL_DT = 0.04
 PHYS_SUB = 2
 CRUISE_Z = 4.0
 REACH_R = 2.0
+GOAL_R = 3.2          # visit/survey goals sit at a landmark's centre; within 3.2 m counts as visited
 DELIVER_R = 2.5
 _EYE = None
 
@@ -90,7 +91,7 @@ class World:
         ws = wind_scale if wind_scale is not None else float(self.rng.uniform(0.85, 1.25))
         self.wind = np.array(arena.GUST["wind"]) * ws
         self.turb = arena.GUST["turb"] * ws
-        self.fly = FlyBrains(brain, len(self.order)) if brain in ("real", "rewired") else None
+        self.fly = FlyBrains(brain, len(self.order)) if brain in ("real", "rewired", "rewired_class") else None
         self.reactive = Reactive()
         self.last_brain = {}
 
@@ -192,7 +193,8 @@ class World:
         tgt = d.target
         if d.active and not d.done and tgt is not None:
             dist = math.hypot(tgt.x - d.pos[0], tgt.y - d.pos[1])
-            if dist < (DELIVER_R if tgt.kind == "deliver" else (arena.HOME_RADIUS if tgt.kind == "home" else REACH_R)):
+            radius = {"deliver": DELIVER_R, "home": arena.HOME_RADIUS, "goal": GOAL_R}.get(tgt.kind, REACH_R)
+            if dist < radius:
                 if tgt.kind == "deliver":
                     d.delivered = True
                     self.events.append({"type": "delivered", "drone": d.name, "t": self.t, "landmark": tgt.label})

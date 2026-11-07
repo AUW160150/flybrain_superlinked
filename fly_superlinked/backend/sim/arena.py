@@ -56,7 +56,7 @@ LANDMARK_BY_NAME = {lm.name: lm for lm in LANDMARKS}
 HOME = (0.0, -16.0)
 HOME_RADIUS = 1.5
 POND = {"center": (2.0, -7.0), "radius": 3.0}               # no-fly zone (marked on every map)
-GUST = {"min": (2.0, 0.0), "max": (11.0, 9.0), "wind": (-3.5, 0.0, -0.6), "turb": 2.5}   # hidden at start
+GUST = {"min": (2.0, 0.0), "max": (11.0, 9.0), "wind": (-2.5, 0.0, -0.5), "turb": 2.0}   # hidden at start
 PRIMS = [p for lm in LANDMARKS for p in lm.prims]
 
 

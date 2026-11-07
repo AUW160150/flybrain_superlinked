@@ -1,0 +1,250 @@
+
+[2m2026-11-07T20:32:01.104580[0m [[32m[1minfo     [0m] [1mLog file created at: /Users/rodela/.cognee/logs/2026-11-07_20-32-01.log[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mlog_file[0m=[35m/Users/rodela/.cognee/logs/2026-11-07_20-32-01.log[0m
+
+[2m2026-11-07T20:32:01.104814[0m [[33m[1mwarning  [0m] [1mCognee 1.0 changes: New API — remember/recall/forget/improve (V1 add/cognify/search still work). Session memory enabled by default (CACHING=false to disable). Multi-user access control on by default (ENABLE_BACKEND_ACCESS_CONTROL=false to disable). Agents (@cognee.agent) auto-verified on registration. See https://docs.cognee.ai/[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:32:01.104896[0m [[32m[1minfo     [0m] [1mLogging initialized           [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mcognee_version[0m=[35m1.6.7[0m [36mdatabase_path[0m=[35m/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/var/ablation_reactive_shared/cognee_system/databases[0m [36mos_info[0m=[35m'Darwin 25.5.0 (Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:26 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T8132)'[0m [36mpython_version[0m=[35m3.12.13[0m [36mstructlog_version[0m=[35m25.5.0[0m
+
+[2m2026-11-07T20:32:01.104969[0m [[32m[1minfo     [0m] [1mDatabase storage: /Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/var/ablation_reactive_shared/cognee_system/databases[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:32:01.105018[0m [[32m[1minfo     [0m] [1mLoaded settings from /Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/.env; its values take precedence over preset environment variables.[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:32:02.414717[0m [[32m[1minfo     [0m] [1mauth posture: authentication=required, multi_tenant=enabled (inherited from ENABLE_BACKEND_ACCESS_CONTROL)[0m [[0m[1m[34mget_authenticated_user[0m][0m
+
+[1msetup plugin alembic.autogenerate.schemas[0m
+
+[1msetup plugin alembic.autogenerate.tables[0m
+
+[1msetup plugin alembic.autogenerate.types[0m
+
+[1msetup plugin alembic.autogenerate.constraints[0m
+
+[1msetup plugin alembic.autogenerate.defaults[0m
+
+[1msetup plugin alembic.autogenerate.comments[0m
+
+[1msetup plugin alembic.ext.checkconstraint_byname[0m
+
+[1mUsing database: sqlite+aiosqlite:////Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/var/ablation_reactive_shared/cognee_system/databases/cognee_db[0m
+
+[1mContext impl SQLiteImpl.      [0m
+
+[1mWill assume non-transactional DDL.[0m
+
+[1mRunning upgrade  -> 8057ae7329c2, Initial migration[0m
+
+[1mRunning upgrade 8057ae7329c2 -> 482cd6517ce4, Add default user[0m
+
+[1mRunning upgrade 482cd6517ce4 -> 1d0bb7fede17, Add pipeline run status[0m
+
+[1mRunning upgrade 1d0bb7fede17 -> ab7e313804ae, permission_system_rework[0m
+
+[1mRunning upgrade ab7e313804ae -> e4ebee1091e7, Expand data model info[0m
+
+[1mRunning upgrade e4ebee1091e7 -> b9274c27a25a, kuzu-11-migration[0m
+
+[1mRunning upgrade b9274c27a25a -> 1daae0df1866, incremental_loading[0m
+
+[1mRunning upgrade 1daae0df1866 -> 9e7a3cb85175, loader_separation[0m
+
+[1mRunning upgrade 9e7a3cb85175 -> 45957f0a9849, Add notebook table[0m
+
+[1mRunning upgrade 45957f0a9849 -> 211ab850ef3d, Add sync_operations table[0m
+
+[1mRunning upgrade 211ab850ef3d -> c946955da633, Multi Tenant Support[0m
+
+[1mRunning upgrade c946955da633 -> 76625596c5c3, Expand dataset database for multi user[0m
+
+[1mRunning upgrade 76625596c5c3 -> 46a6ce2bd2b2, Expand dataset database with json connection field[0m
+
+[1mRunning upgrade 46a6ce2bd2b2 -> a1b2c3d4e5f6, Add label column to data table[0m
+
+[1mRunning upgrade a1b2c3d4e5f6 -> e1ec1dcb50b6, add_last_accessed_to_data[0m
+
+[1mRunning upgrade e1ec1dcb50b6 -> 1a58b986e6e1, Enable delete for old tutorial notebooks[0m
+
+[1mRunning upgrade 1a58b986e6e1 -> 84e5d08260d6, Replace graph ledger table with nodes and edges tables[0m
+
+[1mRunning upgrade 84e5d08260d6 -> 18f01b0a0b4c, create principal configuration table[0m
+
+[1mRunning upgrade 18f01b0a0b4c -> b1c2d3e4f5a6, add_user_api_key_table[0m
+
+[1mRunning upgrade b1c2d3e4f5a6 -> f1a2b3c4d5e6, add_importance_weight_to_data[0m
+
+[1mRunning upgrade f1a2b3c4d5e6 -> d4e5f6a7b8c9, add dataset_configuration table[0m
+
+[1mRunning upgrade d4e5f6a7b8c9 -> 6ee94db7381f, remove unique constraint tenant name[0m
+
+[1mRunning upgrade 6ee94db7381f -> b2c3d4e5f6a7, add created_at index to queries and results tables[0m
+
+[1mRunning upgrade b2c3d4e5f6a7 -> 7c5d4e2f8a91, Add parent_user_id to users[0m
+
+[1mRunning upgrade 7c5d4e2f8a91 -> 24f5d4f64d0d, Add session lifecycle tables.[0m
+
+[1mRunning upgrade 24f5d4f64d0d -> 760ef4f08ef0, change node label and type to text[0m
+
+[1mRunning upgrade 760ef4f08ef0 -> c1a2b3d4e5f9, Add Cognee version and migration revision tracking to dataset_database[0m
+
+[1mRunning upgrade c1a2b3d4e5f9 -> d8f4a1b2c3e9, Add the single-row global_database_version table[0m
+
+[1mRunning upgrade d8f4a1b2c3e9 -> aa753a730673, add pipeline run id to nodes and edges[0m
+
+[1mRunning upgrade aa753a730673 -> b2c4d6e8f0a1, add_integration_credentials_table[0m
+
+[1mRunning upgrade b2c4d6e8f0a1 -> c3d5e7f9a1b2, dedupe cache_session_context and add unique entry index[0m
+
+[1mRunning upgrade c3d5e7f9a1b2 -> d4e6f8a0b2c3, add_integration_credentials_workspace_id[0m
+
+[1mRunning upgrade d4e6f8a0b2c3 -> e5a7b9c1d3f4, add_dataset_id_to_queries_and_results[0m
+
+[1mRunning upgrade e5a7b9c1d3f4 -> c5d7e9f1a3b5, add_dataset_id_to_data[0m
+
+[1mRunning upgrade c5d7e9f1a3b5 -> d6e8f0a2b4c6, backfill_dataset_scoped_data_drop_dataset_data[0m
+
+[1mRunning upgrade d6e8f0a2b4c6 -> f2b4c6d8e0a1, add_system_metadata_to_data[0m
+
+[1mRunning upgrade f2b4c6d8e0a1 -> b8c1d3e5f7a9, Add provenance_entries table[0m
+
+[1mRunning upgrade b8c1d3e5f7a9 -> a7f3c9e1b5d2, Extend pipeline_runs into the operation record (SDK-399)[0m
+
+[1mRunning upgrade a7f3c9e1b5d2 -> c7e2a9b4d1f3, add_created_and_last_used_to_user_api_key[0m
+
+[1mRunning upgrade c7e2a9b4d1f3 -> c4e8a1f6b3d7, Index pipeline_runs on (created_at, id)[0m
+
+[1mRunning upgrade c4e8a1f6b3d7 -> b3d5f7a9c1e2, add_graph_metrics_has_full_metrics[0m
+
+[1mRunning upgrade b3d5f7a9c1e2 -> d1e2f3a4b5c6, Add composite index on pipeline_runs for the /status latest-run lookup[0m
+
+[1mRunning upgrade d1e2f3a4b5c6 -> f3a7b9c1d2e4, Add the compact graph edge evidence sidecar.[0m
+
+[1mRunning upgrade f3a7b9c1d2e4 -> 1c22e6cb5aec, Reconcile every database to the chain's frozen truth[0m
+
+[1mRunning upgrade 1c22e6cb5aec -> a7c2e9f4b8d1, Add agent_id to session_records for agent-to-search attribution[0m
+
+[1mRunning upgrade a7c2e9f4b8d1 -> e7f9a1c3d5b8, Add composite index on data for the dataset listing[0m
+
+[1mRunning upgrade e7f9a1c3d5b8 -> f6b8d0a2c4e6, Add the capability layer[0m
+
+[1mRunning upgrade f6b8d0a2c4e6 -> d4a8e2f6b1c9, Add embedding token usage columns (SDK-1077)[0m
+
+[1mRunning upgrade d4a8e2f6b1c9 -> b7e4c2a9d6f1, Drop the data key from pipeline_runs.run_info (COG-6089)[0m
+
+[1mRunning upgrade b7e4c2a9d6f1 -> dd760c09e075, Move pipeline_runs.session_id into pipeline_run_sessions (CLO-1105)[0m
+
+[1mRelational migrations applied (target head).[0m
+
+[1mUser 51539682-d885-4ec1-9c57-b374854a0595 has registered.[0m
+
+[1mUser ba6f3cc8-31c4-463c-b599-763578b11886 has registered.[0m
+
+[1mUser f033fdad-caa3-4dd7-a7d0-f9a3ce6527df has registered.[0m
+
+[1mUser 9e846532-9a43-4171-97cc-c213c519a2a1 has registered.[0m
+
+[1mUsing database: sqlite+aiosqlite:////Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/var/ablation_reactive_shared/cognee_system/databases/cognee_db[0m
+
+[1mContext impl SQLiteImpl.      [0m
+
+[1mWill assume non-transactional DDL.[0m
+
+[1mRelational migrations applied (target head).[0m
+
+[2m2026-11-07T20:32:04.018248[0m [[32m[1minfo     [0m] [1mSkipping LLM/embedding connection tests (COGNEE_SKIP_CONNECTION_TEST is set).[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-11-07T20:32:04.061720[0m [[32m[1minfo     [0m] [1mPipeline item started: `2f40386f-9a10-5d83-b58f-f6f64f1ef028`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:32:04.062018[0m [[32m[1minfo     [0m] [1mCoroutine task started: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:04.062418[0m [[32m[1minfo     [0m] [1mCoroutine task started: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:04.062611[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset starting[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.062682[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] starting: save files and compute content hashes (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.062777[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 1/4] finished in 0.000 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.062835[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] starting: resolve data IDs (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.066611[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 2/4] finished in 0.004 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.066722[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] starting: process files and build data records (1 items)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.066877[0m [[32m[1minfo     [0m] [1mRegistered loader: pypdf_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.066947[0m [[32m[1minfo     [0m] [1mRegistered loader: text_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067044[0m [[32m[1minfo     [0m] [1mRegistered loader: code_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067132[0m [[32m[1minfo     [0m] [1mRegistered loader: image_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067193[0m [[32m[1minfo     [0m] [1mRegistered loader: audio_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067243[0m [[32m[1minfo     [0m] [1mRegistered loader: video_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067290[0m [[32m[1minfo     [0m] [1mRegistered loader: csv_loader [0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067341[0m [[32m[1minfo     [0m] [1mRegistered loader: advanced_pdf_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067496[0m [[32m[1minfo     [0m] [1mRegistered loader: docling_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.067557[0m [[32m[1minfo     [0m] [1mRegistered loader: dlt_csv_loader[0m [[0m[1m[34mcognee.infrastructure.loaders.LoaderEngine[0m][0m
+
+[2m2026-11-07T20:32:04.068178[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 3/4] finished in 0.001 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.068251[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] starting: DB commit (1 new, 0 updated)[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.071816[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset [loop 4/4] finished in 0.004 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.071909[0m [[32m[1minfo     [0m] [1mcognee-core store_to_dataset finished in 0.009 seconds[0m [[0m[1m[34mcognee.tasks.ingestion.ingest_data[0m][0m
+
+[2m2026-11-07T20:32:04.072044[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `ingest_data`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:04.072386[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `resolve_data_directories`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:04.072642[0m [[32m[1minfo     [0m] [1mPipeline item completed: `2f40386f-9a10-5d83-b58f-f6f64f1ef028`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+sync_operations table already exists, skipping creation
+principal_configuration table already exists, skipping creation
+session_records table already exists, skipping creation
+session_model_usage table already exists, skipping creation
+
+[2m2026-11-07T20:32:09.643529[0m [[32m[1minfo     [0m] [1mBuilding memory for dataset 'swarm_map': extraction run 2279f972-ca40-4161-966b-1f23694f9920 (cognify_pipeline) started; the indexing run goes first so the data answers searches before extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:32:09.663125[0m [[32m[1minfo     [0m] [1mIndexing dataset 'swarm_map' (indexing_pipeline, run f1b00f2a-5305-4f29-b67e-820d645b4332): chunking and embedding 1 item(s) so chunk searches answer before entity extraction.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:32:09.675751[0m [[32m[1minfo     [0m] [1mPipeline item started: `c7ef6276-6122-5225-8235-18f477124cfb`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:32:09.676044[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:09.676420[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:09.683558[0m [[32m[1minfo     [0m] [1mCoroutine task started: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[1mHTTP Request: POST https://api.superlinked.com/v1/embeddings "HTTP/1.1 200 OK"[0m
+
+[2m2026-11-07T20:32:10.977794[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `index_chunks_for_search`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:10.978147[0m [[32m[1minfo     [0m] [1mAsync Generator task completed: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:10.978296[0m [[32m[1minfo     [0m] [1mCoroutine task completed: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:10.978428[0m [[32m[1minfo     [0m] [1mPipeline item completed: `c7ef6276-6122-5225-8235-18f477124cfb`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:32:10.990442[0m [[32m[1minfo     [0m] [1mDataset 'swarm_map' is indexed: 1 item(s) chunked and embedded, 0 already were. Chunk searches (CHUNKS, CHUNKS_LEXICAL, RAG_COMPLETION, HYBRID_COMPLETION) answer now; entity extraction is next, and graph-based answers improve once it completes.[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:32:10.990910[0m [[32m[1minfo     [0m] [1mExtracting entities and relationships for dataset 'swarm_map' (cognify_pipeline, run 2279f972-ca40-4161-966b-1f23694f9920).[0m [[0m[1m[34mcognify[0m][0m
+
+[2m2026-11-07T20:32:11.002883[0m [[32m[1minfo     [0m] [1mPipeline item started: `1b21d327-d1db-5a65-ab95-abf492082d5d`[0m [[0m[1m[34mrun_tasks_with_telemetry()[0m][0m
+
+[2m2026-11-07T20:32:11.003150[0m [[32m[1minfo     [0m] [1mCoroutine task started: `classify_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:11.003412[0m [[32m[1minfo     [0m] [1mAsync Generator task started: `extract_chunks_from_documents`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:11.051875[0m [[32m[1minfo     [0m] [1mCoroutine task started: `find_indexed_chunks`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:11.055518[0m [[32m[1minfo     [0m] [1m1 of 1 chunk(s) are already indexed and will not be embedded again.[0m [[0m[1m[34mfind_indexed_chunks[0m][0m
+
+[2m2026-11-07T20:32:11.055629[0m [[32m[1minfo     [0m] [1mCoroutine task started: `extract_graph_and_summarize`[0m [[0m[1m[34mrun_tasks_base[0m][0m
+
+[2m2026-11-07T20:32:11.731109[0m [[32m[1minfo     [0m] [1mCoroutine task started: `add_data_points`[0m [[0m[1m[34mrun_tasks_base[0m][0m

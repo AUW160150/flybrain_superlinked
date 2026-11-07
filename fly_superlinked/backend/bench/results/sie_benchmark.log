@@ -1,0 +1,7 @@
+sie done 63
+frontier done 58
+sie mission_planner {'model': 'Qwen/Qwen3.5-4B', 'valid_json_rate': np.float64(1.0), 'exact_match': 0.867, 'field_accuracy': 0.961, 'median_latency_s': 2.901, 'cost_per_1000_calls_usd': 0.3615}
+sie perception {'model': 'Qwen/Qwen3.5-4B', 'valid_json_rate': np.float64(1.0), 'exact_match': 0.075, 'field_accuracy': 0.438, 'median_latency_s': 1.095, 'cost_per_1000_calls_usd': 0.2155}
+frontier mission_planner {'model': 'claude-opus-5-5', 'valid_json_rate': np.float64(1.0), 'exact_match': 0.967, 'field_accuracy': 0.992, 'median_latency_s': 1.938, 'cost_per_1000_calls_usd': 8.4863}
+frontier perception {'model': 'claude-opus-5-5', 'valid_json_rate': np.float64(1.0), 'exact_match': 0.275, 'field_accuracy': 0.625, 'median_latency_s': 1.778, 'cost_per_1000_calls_usd': 5.8732}
+wrote /Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked/backend/bench/results/sie_benchmark.json

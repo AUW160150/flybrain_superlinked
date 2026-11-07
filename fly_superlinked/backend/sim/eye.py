@@ -125,10 +125,14 @@ class CompoundEye:
         img = rgb[self.eq_idx] * self.eq_cover[:, None]
         return (img.reshape(H, W, 3) * 255).astype(np.uint8)
 
-    def equirect_png(self, rgb, fmt="PNG"):
+    def equirect_png(self, rgb, fmt="PNG", scale=4):
+        """128 x 64 panorama of the eye's samples, upscaled (nearest) so vision models see blocks, not blur."""
         from PIL import Image
         buf = io.BytesIO()
-        Image.fromarray(self.equirect(rgb)).save(buf, format=fmt)
+        img = Image.fromarray(self.equirect(rgb))
+        if scale > 1:
+            img = img.resize((img.width * scale, img.height * scale), Image.NEAREST)
+        img.save(buf, format=fmt)
         return buf.getvalue()
 
     def mosaic_bytes(self, rgb):

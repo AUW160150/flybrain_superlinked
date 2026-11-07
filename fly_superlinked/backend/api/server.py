@@ -43,13 +43,15 @@ class State:
         self.log_cursor = 0
         self.call_cursor = 0
         self.speed = 1.0
+        self.loop = None
 
 
 S = State()
 
 
-def new_swarm():
+def new_swarm(loop=None):
     S.swarm = Swarm(S.memory, seed=S.seed, brain=S.brain, memory_mode=S.memory_mode)
+    S.swarm.loop = loop or S.loop
     S.recording = []
     S.log_cursor = 0; S.call_cursor = 0
 
@@ -70,6 +72,7 @@ async def setup_memory():
 
 @asynccontextmanager
 async def lifespan(app):
+    S.loop = asyncio.get_running_loop()
     new_swarm()
     asyncio.create_task(setup_memory())
     task = asyncio.create_task(sim_loop())
@@ -196,10 +199,10 @@ async def post_mission(m: MissionIn):
 
 @app.post("/api/sim/reset")
 async def reset(r: ResetIn):
-    if r.brain not in ("real", "rewired", "reactive") or r.memory_mode not in ("none", "private", "shared"):
+    if r.brain not in ("real", "rewired", "rewired_class", "reactive") or r.memory_mode not in ("none", "private", "shared"):
         raise HTTPException(400, "bad brain or memory mode")
     S.seed, S.brain, S.memory_mode = r.seed, r.brain, r.memory_mode
-    await asyncio.to_thread(new_swarm)
+    new_swarm()
     return {"ok": True, "seed": S.seed, "brain": S.brain, "memory_mode": S.memory_mode}
 
 
@@ -256,9 +259,9 @@ def bench_probe():
 
 
 @app.get("/api/memory/graph")
-def memory_graph():
+async def memory_graph():
     """Nodes and edges from swarm_map and outcomes only: the datasets the operator can read."""
-    return S.memory.graph()
+    return await S.memory.graph()
 
 
 @app.get("/api/memory/events")
@@ -281,7 +284,7 @@ def status():
     sw = S.swarm
     return {"memory_backend": S.memory_status, "sie": llm.sie_configured(), "frontier": llm.frontier_provider() or "not configured",
             "models": llm.models(), "seed": S.seed, "brain": S.brain, "memory_mode": S.memory_mode,
-            "t": sw.world.t if sw else 0, "raster_neurons": [{"type": t, "side": s} for _, t, s in (sw.world.fly.raster if sw and sw.world.fly else [])],
+            "t": sw.world.t if sw else 0, "raster_neurons": [{"type": t, "side": s, "group": g} for _, t, s, g in (sw.world.fly.raster if sw and sw.world.fly else [])],
             "calibration": getattr(sw.world.fly, "calibration", None) if sw and sw.world.fly else None}
 
 

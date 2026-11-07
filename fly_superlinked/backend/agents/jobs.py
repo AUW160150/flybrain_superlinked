@@ -101,10 +101,13 @@ class Observation(BaseModel):
 PERCEPTION_SYSTEM = (
     "You read a drone's 360-degree panoramic camera frame (equirectangular: the centre column is straight ahead, "
     "the left quarter is to the drone's left, the right quarter to its right, both edges are behind). "
-    "Report the single most prominent landmark. Landmarks: red_tower (tall red cylinder), blue_arch (blue gate of two posts and a beam), "
+    "The image shows what the drone's compound eye samples (coarse blocks are single eye facets). "
+    "Report the single most prominent landmark (the one covering the most of the image). Landmarks: red_tower (tall red cylinder), blue_arch (blue gate of two posts and a beam), "
     "yellow_cubes (cluster of yellow cubes), green_tree_1..5 (green cylinders; pick the most prominent tree's number only if certain, else the "
-    "nearest by the pose given). Use 'none' if no landmark is clearly visible. hazard: 'water' if the dark blue pond is visible below, "
-    "'obstacle' if a landmark is very near and ahead, else 'none'."
+    "nearest by the pose given). Use 'none' if no landmark is clearly visible. "
+    "bearing: 'ahead' if its centre is within the middle quarter of the image, 'left'/'right' for the next quarters, 'behind' near the edges. "
+    "approx_distance: 'near' (closer than about 6 m: it looks large, spanning a big part of the frame height), 'medium' (6 to 15 m), 'far' (beyond 15 m: small). "
+    "hazard: 'obstacle' if that landmark is near and ahead; otherwise 'water' if the dark blue pond is visible on the ground; otherwise 'none'."
 )
 
 
