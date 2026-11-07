@@ -1,0 +1,17 @@
+# Published list prices used for cost-per-1,000-calls. Cost = measured tokens (from each API's usage field) x price.
+# Read 2026-11-07. Re-check before quoting.
+sie:
+  source: https://superlinked.com/models (SIE Serverless list prices)
+  Qwen/Qwen3.5-4B: {input_per_mtok: 0.305, output_per_mtok: 1.53}
+  Qwen/Qwen3.8-27B-FP8: {input_per_mtok: 0.25, output_per_mtok: 2.75}
+  zai-org/GLM-5.3-Flash: {input_per_mtok: 0.15, output_per_mtok: 0.50}
+  google/siglip2-base-patch16-224: {input_per_mtok: 0.0231, per_1000_images: 0.0143}
+  google/siglip-so400m-patch14-384: {input_per_mtok: 0.031, per_1000_images: 0.0233}
+  BAAI/bge-m3: {input_per_mtok: 0.0377}
+anthropic:
+  source: https://docs.anthropic.com/en/docs/about-claude/pricing (first-party API list prices, cached 2026-10-06)
+  claude-opus-5-5: {input_per_mtok: 4.00, output_per_mtok: 20.00}
+  claude-sonnet-5-5: {input_per_mtok: 2.00, output_per_mtok: 10.00}
+  claude-haiku-5-5: {input_per_mtok: 0.10, output_per_mtok: 0.50}
+openai_compatible:
+  source: set FRONTIER_PRICE_IN / FRONTIER_PRICE_OUT (USD per 1M tokens) with the provider's pricing URL in FRONTIER_PRICE_SOURCE

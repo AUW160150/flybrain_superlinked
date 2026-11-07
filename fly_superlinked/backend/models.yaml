@@ -1,0 +1,6 @@
+# One line per agent job. Swap a model by editing one line. IDs from https://superlinked.com/models (read 2026-11-07).
+mission_planner: Qwen/Qwen3.5-4B
+perception: Qwen/Qwen3.5-4B
+place_embedding: google/siglip2-base-patch16-224
+memory_llm: Qwen/Qwen3.8-27B-FP8
+memory_embedding: BAAI/bge-m3
