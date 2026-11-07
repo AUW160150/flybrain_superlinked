@@ -98,18 +98,17 @@ cd frontend && npm ci && npm run build && cd ..
 ## Architecture
 
 ```mermaid
-flowchart LR
-  OP["Operator sentence"] --> PL["Mission planner: SIE Qwen3.5-4B"]
+flowchart TD
+  OP["Operator sentence"] --> PL["Mission planner<br/>SIE Qwen3.5-4B"]
   PL --> RT["Route planner"]
-  MEM[("cognee memory: swarm_map, outcomes, private")] -->|"recall before each leg"| RT
-  RT -->|"target landmark"| EYE["Compound eye: 1,709 rays"]
-  EYE --> BR["MaleCNS connectome: 10,203 LIF neurons"]
+  MEM[("cognee shared memory<br/>swarm_map, outcomes, private")] -->|"recall before each leg"| RT
+  RT -->|"target landmark"| EYE["Compound eye<br/>1,709 measured facets"]
+  EYE --> BR["MaleCNS connectome<br/>10,203 spiking neurons"]
+  EYE --> PC["Perception and place recognition<br/>SIE Qwen3.5-4B and SigLIP"]
   BR -->|"yaw, speed, escape"| DR["Drone physics"]
-  DR -->|"gust felt, outcomes"| MEM
-  EYE --> PC["Perception and place recognition: SIE"]
-  PC --> MEM
-  DR --> API["FastAPI and WebSocket"]
-  API --> UI["React and three.js"]
+  DR -->|"gust felt, mission outcome"| MEM
+  PC -->|"facts"| MEM
+  DR --> UI["FastAPI WebSocket to React and three.js"]
 ```
 
 **Stack:**
