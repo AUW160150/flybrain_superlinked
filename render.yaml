@@ -3,7 +3,7 @@ services:
   - type: web
     name: flybrain-swarm
     runtime: docker
-    plan: starter            # free plan sleeps and has too little memory for torch + cognee
+    plan: standard           # 2 GB; Starter (512 MB) restarts under torch + cognee + three brains
     dockerfilePath: ./Dockerfile
     dockerContext: .
     rootDir: fly_superlinked
