@@ -56,10 +56,25 @@ def new_swarm(loop=None):
     S.log_cursor = 0; S.call_cursor = 0
 
 
-async def setup_memory():
+async def setup_memory(attempts=3):
+    """cognee's first cognify can fail on a malformed model reply; retry before falling back."""
+    from ..memory.store import CogneeBackend, cognee_configured
+    err = None
+    for i in range(attempts):
+        try:
+            await S.memory.setup()
+            S.memory_status = S.memory.backend.name
+            return
+        except Exception as e:
+            err = e
+            S.memory_status = f"starting (cognee setup attempt {i + 1} failed, retrying)"
+            await asyncio.sleep(5)
+            if cognee_configured():
+                S.memory = SwarmMemory(CogneeBackend())
+                if S.swarm:
+                    S.swarm.memory = S.memory
     try:
-        await S.memory.setup()
-        S.memory_status = S.memory.backend.name
+        raise err
     except Exception as e:
         # cognee failed to start: fall back loudly rather than pretending
         from ..memory.store import LocalBackend
