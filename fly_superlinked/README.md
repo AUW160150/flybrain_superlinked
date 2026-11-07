@@ -67,7 +67,15 @@ real minus reactive: success difference -0.40 (95% paired bootstrap CI -0.60 to 
 
 ### Memory ablation (cognee prize evidence)
 
-_Memory ablation not run._
+Brain: reactive. Memory backend: cognee. Seeds 0–19 flown in order. Generated 2026-11-07 13:14:47.
+
+| courier memory | completed | mean time (s) | gust entries / mission | missions entering gust | first 5 missions entering gust | collisions |
+|---|---:|---:|---:|---:|---:|---:|
+| no memory | 100% | 20.4 | 2.10 | 100% | 100% | 0.00 |
+| private memory only | 100% | 21.4 | 0.60 | 55% | 100% | 0.00 |
+| shared swarm memory | 100% | 22.6 | 0.15 | 15% | 60% | 0.00 |
+
+Memory events per arm (writes / reads / denied / feedback / improve / errors): none: 136/0/116/20/20/0; private: 39/80/11/20/20/0; shared: 36/80/4/20/21/0.
 
 ### SIE vs frontier (Superlinked prize evidence)
 
