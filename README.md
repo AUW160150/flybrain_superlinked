@@ -1,13 +1,13 @@
-# superlinked: Flybrain Swarm
+<h1 align="center">Flybrain Swarm</h1>
 
-*A fly brain flies, small open models see and plan, and the swarm remembers together.*
+<p align="center"><em>A fly brain flies, small open models see and plan, and the swarm remembers together.</em></p>
 
-| | |
-|---|---|
-| ▶ **Demo video** | https://www.loom.com/share/4cfdcb64c2374509bf463aa0c1fe609c |
-| 🌐 **Live app** | https://flybrain-swarm.onrender.com/ |
-| 📖 **Full technical README** | [`fly_superlinked/README.md`](fly_superlinked/README.md) |
-| 🎬 **Two-minute demo script** | [`fly_superlinked/DEMO.md`](fly_superlinked/DEMO.md) |
+<p align="center">
+  <a href="https://www.loom.com/share/4cfdcb64c2374509bf463aa0c1fe609c"><b>▶ Watch the demo video</b></a> &nbsp;·&nbsp;
+  <a href="https://flybrain-swarm.onrender.com/"><b>🌐 Open the live app</b></a> &nbsp;·&nbsp;
+  <a href="fly_superlinked/README.md"><b>📖 Technical README</b></a> &nbsp;·&nbsp;
+  <a href="fly_superlinked/DEMO.md"><b>🎬 Demo script</b></a>
+</p>
 
 Hackathon project for **LOCALHOST NYC (7 November 2026)**, built for the **Superlinked** and **cognee** prizes on top of the [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
 
@@ -64,12 +64,14 @@ All numbers come from `fly_superlinked/backend/bench/results/*.json`; the README
 | **04 Results** | Controller comparison, memory ablation, and SIE vs frontier, read live from the bench files. |
 | **05 Method** | What the connectome controls and what is engineered, the data sources, the circuit probe, and known limits. |
 
-<p>
-<img src="fly_superlinked/docs/img/inside-the-fly.png" alt="Inside the fly: compound eye mosaic and spike raster" width="49%">
-<img src="fly_superlinked/docs/img/swarm-memory.png" alt="Swarm memory: event feed with cognee permission denials and the knowledge graph" width="49%">
-</p>
+<table>
+<tr>
+<td width="50%"><b>02 Inside the fly</b><br><img src="fly_superlinked/docs/img/inside-the-fly.png" alt="Inside the fly: compound eye mosaic and spike raster"></td>
+<td width="50%"><b>03 Swarm memory</b><br><img src="fly_superlinked/docs/img/swarm-memory.png" alt="Swarm memory: event feed with cognee permission denials and the knowledge graph"></td>
+</tr>
+</table>
 
-![Results page](fly_superlinked/docs/img/results.png)
+The Results page (controller comparison, memory ablation, SIE vs frontier) is shown in full in the [technical README](fly_superlinked/README.md#results).
 
 ## Try it
 
@@ -82,7 +84,7 @@ If the live sim is slow, switch to **Replay** on Mission control.
 **Locally:**
 
 ```bash
-git clone https://github.com/AUW160150/superlinked && cd superlinked/fly_superlinked
+git clone https://github.com/AUW160150/flybrain_superlinked && cd flybrain_superlinked/fly_superlinked
 python3.12 -m venv .venv
 .venv/bin/pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
 .venv/bin/pip install -r requirements.txt && .venv/bin/pip install --no-deps sie-sdk==0.11.0
@@ -97,15 +99,17 @@ cd frontend && npm ci && npm run build && cd ..
 
 ```mermaid
 flowchart LR
-  OP[Operator sentence] --> PL[Mission planner<br/>SIE Qwen3.5-4B]
-  PL --> RT[Route planner]
-  MEM[(cognee memory<br/>swarm_map · outcomes · private_*)] -->|recall before each leg| RT
-  RT -->|target landmark| EYE[Compound eye<br/>1,709 rays]
-  EYE --> BR[MaleCNS connectome<br/>10,203 LIF neurons]
-  BR -->|yaw, speed, escape| DR[Drone physics]
-  DR -->|gust felt, outcomes| MEM
-  EYE --> PC[Perception + place recognition<br/>SIE Qwen3.5-4B, SigLIP] --> MEM
-  DR --> API[FastAPI + WebSocket 20 Hz] --> UI[React + three.js]
+  OP["Operator sentence"] --> PL["Mission planner: SIE Qwen3.5-4B"]
+  PL --> RT["Route planner"]
+  MEM[("cognee memory: swarm_map, outcomes, private")] -->|"recall before each leg"| RT
+  RT -->|"target landmark"| EYE["Compound eye: 1,709 rays"]
+  EYE --> BR["MaleCNS connectome: 10,203 LIF neurons"]
+  BR -->|"yaw, speed, escape"| DR["Drone physics"]
+  DR -->|"gust felt, outcomes"| MEM
+  EYE --> PC["Perception and place recognition: SIE"]
+  PC --> MEM
+  DR --> API["FastAPI and WebSocket"]
+  API --> UI["React and three.js"]
 ```
 
 **Stack:**
@@ -117,7 +121,7 @@ flowchart LR
 ## Repository map
 
 ```
-superlinked/
+flybrain_superlinked/
   README.md            this page
   render.yaml          Render blueprint (Docker web service, health check /healthz)
   fly_superlinked/

@@ -40,7 +40,7 @@ Scope: the full prompt in prompt.md. That covers sim, compound eye, connectome c
   CWD: .
   EVIDENCE: automatic-evidence=v1; definition-sha256=a65676689b4e1cb30f8c4b6e6925f488d0d1674417f748b80cedc0310d5aa01e; exit=0; EXPECT=matched; output-sha256=d446d98a07381156efe35c1729f9852784bbfa72a55174a6b86d85869750c558; output-bytes=10; shell=/bin/sh; cwd=/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked; path=850bd16ad3bb/21 entries
 
-- [x] G7: everything is committed and pushed to github.com/AUW160150/superlinked
+- [x] G7: everything is committed and pushed to github.com/AUW160150/flybrain_superlinked
   CHECK: .venv/bin/python -m backend.scripts.verify pushed
   EXPECT: PUSHED_OK
   CWD: .
