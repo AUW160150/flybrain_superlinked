@@ -12,3 +12,4 @@ frontend/dist/
 .unlazy-hook-state.json
 .pytest_cache/
 frontend/tsconfig.tsbuildinfo
+prompt.md

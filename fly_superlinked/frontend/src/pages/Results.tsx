@@ -135,9 +135,9 @@ export default function Results() {
       <div className="grid" style={{ gap: 20 }}>
         <section className="card"><div className="section-n">4.1</div><h3>Controller comparison: real vs rewired vs reactive</h3>
           <p className="cap" style={{ marginBottom: 10 }}>{c?.task}</p><Controllers d={c} onTip={setTip} /></section>
-        <section className="card"><div className="section-n">4.2 · cognee prize evidence</div><h3>Memory ablation: does sharing what scouts learned help the courier?</h3>
+        <section className="card"><div className="section-n">4.2 · cognee shared memory</div><h3>Memory ablation: does sharing what scouts learned help the courier?</h3>
           <p className="cap" style={{ marginBottom: 10 }}>{m?.protocol}</p><Memory d={m} onTip={setTip} /></section>
-        <section className="card"><div className="section-n">4.3 · Superlinked prize evidence</div><h3>Everyday agent jobs on SIE open models vs a frontier model</h3><Sie d={s} /></section>
+        <section className="card"><div className="section-n">4.3 · Superlinked SIE</div><h3>Everyday agent jobs on SIE open models vs a frontier model</h3><Sie d={s} /></section>
       </div>
       {tip && <div className="tip" style={{ left: tip.x + 12, top: tip.y + 12 }}>{tip.text}</div>}
     </div>

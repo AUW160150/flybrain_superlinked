@@ -1,4 +1,4 @@
-# Gates: Flybrain Swarm hackathon build
+# Gates: Flybrain Swarm build
 
 OWNS: fly_superlinked/**, render.yaml
 
@@ -28,7 +28,7 @@ Scope: the full prompt in prompt.md. That covers sim, compound eye, connectome c
   CWD: .
   EVIDENCE: automatic-evidence=v1; definition-sha256=0101d90158256246d7daab2d24afed863b334d8f275d036c158d11bf700878ed; exit=0; EXPECT=matched; output-sha256=dc776c5c26016877254dd9b96645d5f7c37f59a9100cec8b78d3238dcbf85aae; output-bytes=7; shell=/bin/sh; cwd=/Users/rodela/Desktop/Desktop/GitProjects/Hackathon_superlinked/fly_superlinked; path=850bd16ad3bb/21 entries
 
-- [x] G5: README has the Mermaid diagram and generated results tables for all three experiments; DEMO, NOTES, LOG, Dockerfile, requirements and render.yaml exist with the required settings
+- [x] G5: README has the Mermaid diagram and generated results tables for all three experiments; NOTES, LOG, Dockerfile, requirements and render.yaml exist with the required settings
   CHECK: .venv/bin/python -m backend.scripts.verify docs
   EXPECT: DOCS_OK
   CWD: .

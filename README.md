@@ -3,13 +3,11 @@
 <p align="center"><em>A fly brain flies, small open models see and plan, and the swarm remembers together.</em></p>
 
 <p align="center">
-  <a href="https://www.loom.com/share/4cfdcb64c2374509bf463aa0c1fe609c"><b>▶ Watch the demo video</b></a> &nbsp;·&nbsp;
   <a href="https://flybrain-swarm.onrender.com/"><b>🌐 Open the live app</b></a> &nbsp;·&nbsp;
-  <a href="fly_superlinked/README.md"><b>📖 Technical README</b></a> &nbsp;·&nbsp;
-  <a href="fly_superlinked/DEMO.md"><b>🎬 Demo script</b></a>
+  <a href="fly_superlinked/README.md"><b>📖 Technical README</b></a>
 </p>
 
-Hackathon project for **LOCALHOST NYC (7 November 2026)**, built for the **Superlinked** and **cognee** prizes on top of the [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
+Built on top of the [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
 
 ![Mission control: three drones, trails, routes, the pond and the discovered gust zone](fly_superlinked/docs/img/mission-control.png)
 
@@ -47,9 +45,9 @@ Three simulated drones (`scout-1`, `scout-2`, `courier`) fly a 40 × 40 m outdoo
 
 All numbers come from `fly_superlinked/backend/bench/results/*.json`; the README tables are generated from these files, never typed by hand.
 
-## Where each prize is addressed
+## Where Superlinked and cognee come in
 
-| Prize | Evidence |
+| Integration | Evidence |
 |---|---|
 | **cognee**: agents share what they learn | **Users and datasets.** One cognee user per drone plus `operator`. There are private datasets, a shared `swarm_map` that only scouts can write, and `outcomes` that only the operator writes. Permission denials come from cognee and appear live, in red, in the Swarm memory page.<br>**Learning loop** (`swarm.py` → `finish_mission`): write the outcome, correct wrong hazards, call `session.add_feedback`, run `improve()`.<br>**Ablation:** a 3-arm memory experiment over 20 seeds. |
 | **Superlinked**: move an agent's everyday jobs off a frontier model | **One line per job:** `backend/models.yaml`.<br>**Reliable output:** strict JSON schemas, pydantic validation, one retry, then a loud failure.<br>**Measurement:** tokens, latency and cost for every call, and a side-by-side benchmark against Claude Opus 5.5 on 30 missions and 40 keyframes.<br>**cognee on SIE too:** its LLM (`Qwen/Qwen3.8-27B-FP8`) and embeddings (`BAAI/bge-m3`) also run on SIE. |
@@ -125,7 +123,6 @@ flybrain_superlinked/
   render.yaml          Render blueprint (Docker web service, health check /healthz)
   fly_superlinked/
     README.md          full technical write-up: how it works, results tables, method and limits
-    DEMO.md            two-minute demo script
     NOTES.md           what was reused from the flybrain research repo
     LOG.md             build log, including bugs found and fixed before the final runs
     GATES.md           completion checks used during the build

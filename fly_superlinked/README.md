@@ -2,8 +2,7 @@
 
 *A fly brain flies, small open models see and plan, and the swarm remembers together.*
 
-**▶ Demo video: https://www.loom.com/share/4cfdcb64c2374509bf463aa0c1fe609c**
-**Live app: https://flybrain-swarm.onrender.com** · Built for LOCALHOST NYC, 7 November 2026, on top of the [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
+**Live app: https://flybrain-swarm.onrender.com** · Built on top of the [Flybrain](https://flybrain-q2h5.onrender.com/) research site.
 
 Three simulated drones (`scout-1`, `scout-2`, `courier`) fly an outdoor arena.
 - **Vision and steering.** Each drone sees through a compound eye built from **1,709 measured ommatidial directions of a real fruit fly**. It is steered by a **10,203-neuron sensory-to-descending sub-circuit of the MaleCNS v1.0 connectome**, simulated as spiking (leaky integrate-and-fire) neurons in 1 ms steps.
@@ -19,16 +18,16 @@ Three simulated drones (`scout-1`, `scout-2`, `courier`) fly an outdoor arena.
 
 | Question | Answer (measured; full tables below) |
 |---|---|
-| Does shared memory help? *(cognee prize)* | **Yes.** The courier flew into the hidden gust zone on **100%** of missions with no memory, **55%** with only its own notes, and **15%** with the scouts' shared memory. It never entered after mission 3. The detour costs about 2 s per mission (22.6 s vs 20.4 s). |
-| Can small open models do the everyday jobs? *(Superlinked prize)* | **For planning, yes.** SIE `Qwen/Qwen3.5-4B` produced the exact gold flight plan on **87%** of 30 missions (96% of fields right), against **97%** for `claude-opus-5-5`, at **1/23 of the cost** ($0.36 vs $8.49 per 1,000 calls). **For perception, neither model is good** on 128×64 eye panoramas (exact match 8% vs 28%), and we say so. |
+| Does shared memory help? *(cognee)* | **Yes.** The courier flew into the hidden gust zone on **100%** of missions with no memory, **55%** with only its own notes, and **15%** with the scouts' shared memory. It never entered after mission 3. The detour costs about 2 s per mission (22.6 s vs 20.4 s). |
+| Can small open models do the everyday jobs? *(Superlinked)* | **For planning, yes.** SIE `Qwen/Qwen3.5-4B` produced the exact gold flight plan on **87%** of 30 missions (96% of fields right), against **97%** for `claude-opus-5-5`, at **1/23 of the cost** ($0.36 vs $8.49 per 1,000 calls). **For perception, neither model is good** on 128×64 eye panoramas (exact match 8% vs 28%), and we say so. |
 | Is the real wiring doing the steering? | **It steers; the shuffles do not.** The real connectome completed **60%** of courier missions (it delivered on 95%). Both degree-preserving rewired graphs completed **0%**. A hand-written reactive controller completed **100%**: the fly brain is not the best controller, and the app says so. |
 | Why do the rewired brains fail? | The real wiring has an **ipsilateral pursuit pathway**: target on the left → LC10 → AOTU → DNa02 on the left → turn left. In the class-preserving shuffle that pathway is **mirrored** (AOTU left drives DNa02 *right*), so the drone turns away from its target. The whole-graph shuffle either does nothing or excites every descending neuron at once. |
 
 ---
 
-## Which part targets which prize
+## Where Superlinked and cognee come in
 
-| Prize | What to look at |
+| Integration | What to look at |
 |---|---|
 | **cognee**: agents share what they learn between each other | `backend/memory/store.py`: one cognee user per drone plus `operator`. Datasets `private_<drone>` (only that drone), `swarm_map` (scouts write, everyone reads) and `outcomes` (only the operator writes, everyone reads). A write without permission is rejected by **cognee itself** (`PermissionDeniedError`, HTTP 403) and shows up red in the Swarm memory feed. The learning loop is `backend/agents/swarm.py` → `finish_mission`, `_correct_hazards`: outcome written, wrong hazards corrected, session feedback scored, `cognee.improve()` run. The ablation is `backend/bench/memory_ablation.py`. |
 | **Superlinked**: move an agent's everyday jobs off a frontier model onto SIE | `backend/models.yaml` (one line per job, swap in one line). `backend/agents/jobs.py`: planner and perception with strict JSON schemas, pydantic validation, one retry, then a loud failure. `backend/agents/llm.py`: measured tokens, latency and cost for SIE and for the frontier model. **cognee itself also runs on SIE** (LLM `Qwen/Qwen3.8-27B-FP8`, embeddings `BAAI/bge-m3`), so the whole memory stack is open models. The benchmark is `backend/bench/sie_bench.py`, with prices and sources in `backend/config/prices.yaml`. |
@@ -133,11 +132,11 @@ flowchart LR
 ### 6. API and replays (`backend/api/server.py`)
 - **WebSocket.** `WS /ws/sim` streams at 20 Hz: drone poses, goals, the eye mosaic, a spike-raster window, descending-neuron readouts, and memory and log events.
 - **REST.** `POST /api/missions`, `POST /api/sim/reset`, `GET /api/bench/{sie,controllers,memory,probe}`, `GET /api/memory/graph`, `GET /healthz`.
-- **Replay mode.** Runs are recorded to JSON (`backend/replays/`) and served by `/api/replays`, so the demo works even if the live sim is slow.
+- **Replay mode.** Runs are recorded to JSON (`backend/replays/`) and served by `/api/replays`, so the app still works if the live sim is slow.
 
 ### 7. A mission, step by step
 
-This is what happens in the two-mission demo (also recorded as `backend/replays/1-scouts-map-north.json` and `2-courier-uses-shared-memory.json`).
+This is what happens in a typical two-mission run (also recorded as `backend/replays/1-scouts-map-north.json` and `2-courier-uses-shared-memory.json`).
 
 1. **Operator speaks.** *"Scouts, map the north side and come home."* goes to `POST /api/missions`. The SIE planner returns a JSON plan, which pydantic validates: `scout-1` and `scout-2` each get ordered landmark goals and `return_home: true`.
 2. **Route.** For each leg, the drone first recalls memory (empty at this point). The visibility-graph router then builds waypoints around the pond, the landmarks and any remembered hazards.
@@ -235,7 +234,7 @@ real minus rewired class: success difference +0.60 (95% paired bootstrap CI +0.4
 
 real minus reactive: success difference -0.40 (95% paired bootstrap CI -0.60 to -0.20).
 
-### Memory ablation (cognee prize evidence)
+### Memory ablation (cognee)
 
 Brain: reactive. Memory backend: cognee. Seeds 0–19 flown in order. Generated 2026-11-07 13:14:47.
 
@@ -247,7 +246,7 @@ Brain: reactive. Memory backend: cognee. Seeds 0–19 flown in order. Generated 
 
 Memory events per arm (writes / reads / denied / feedback / improve / errors): none: 136/0/116/20/20/0; private: 39/80/11/20/20/0; shared: 36/80/4/20/21/0.
 
-### SIE vs frontier (Superlinked prize evidence)
+### SIE vs frontier (Superlinked)
 
 30 missions with hand-written gold plans; 40 keyframes labelled from simulator geometry. Generated 2026-11-07 12:05:11.
 
@@ -281,12 +280,12 @@ fly_superlinked/
     bench/      probe_circuit.py, controllers.py, sie_bench.py, memory_ablation.py, missions.jsonl, keyframes/, results/
     scripts/    prepare_eye.py, readme_tables.py, verify.py
     tests/      plan schema, permission rules, degree-preserving rewiring
-    replays/    recorded demo runs
+    replays/    recorded runs
     models.yaml one line per agent job
     config/prices.yaml  published prices with sources
   frontend/     React + Vite + TypeScript + react-three-fiber (five pages)
   Dockerfile, requirements.txt, ../render.yaml
-  NOTES.md (what was reused from flybrain), LOG.md (build log), DEMO.md (2-minute script), GATES.md (completion checks)
+  NOTES.md (what was reused from flybrain), LOG.md (build log), GATES.md (completion checks)
 ```
 
 ---
@@ -304,7 +303,7 @@ cd frontend && npm ci && npm run build && cd ..
 # frontend dev server with hot reload: cd frontend && npm run dev  -> http://localhost:5173
 ```
 
-For the demo, send *"Scouts, map the north side and come home."* first, then *"Courier, take the package to the red tower and come home, avoid the pond."* The courier then plans around the gust the scouts found. `DEMO.md` has the full two-minute script.
+To try it, send *"Scouts, map the north side and come home."* first, then *"Courier, take the package to the red tower and come home, avoid the pond."* The courier then plans around the gust the scouts found.
 
 Tests: `.venv/bin/pytest -q` (23 tests). They cover the JSON plan schema, the permission rules (a drone cannot write where it lacks write permission), and both rewired shuffles preserving degree.
 

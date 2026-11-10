@@ -68,7 +68,7 @@ export default function App() {
         {page === "method" && <Method />}
       </main>
       <footer><div className="wrap">
-        Flybrain Swarm · LOCALHOST NYC, 7 November 2026 · MaleCNS v1.0 (CC BY 4.0) · built on <a href="https://flybrain-q2h5.onrender.com/">Flybrain</a> · open models on Superlinked SIE · memory on cognee.
+        Flybrain Swarm · MaleCNS v1.0 (CC BY 4.0) · built on <a href="https://flybrain-q2h5.onrender.com/">Flybrain</a> · open models on Superlinked SIE · memory on cognee.
       </div></footer>
     </>
   );

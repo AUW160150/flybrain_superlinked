@@ -113,7 +113,7 @@ def docs():
     seg = readme.split("<!-- RESULTS:START -->")[1].split("<!-- RESULTS:END -->")[0]
     if "not run" in seg or "| real connectome |" not in seg or "| shared swarm memory |" not in seg or "claude-opus" not in seg:
         fail("README results tables incomplete")
-    for f in ("DEMO.md", "NOTES.md", "LOG.md", "Dockerfile", "requirements.txt", "../render.yaml"):
+    for f in ("NOTES.md", "LOG.md", "Dockerfile", "requirements.txt", "../render.yaml"):
         if not (ROOT / f).exists():
             fail(f"missing {f}")
     if "```mermaid" not in readme:

@@ -73,8 +73,8 @@ def sie(d):
 
 def main():
     body = ("\n### Controllers (real vs rewired vs reactive)\n\n" + controllers(load("controllers.json"))
-            + "\n### Memory ablation (cognee prize evidence)\n\n" + memory(load("memory_ablation.json"))
-            + "\n### SIE vs frontier (Superlinked prize evidence)\n\n" + sie(load("sie_benchmark.json")))
+            + "\n### Memory ablation (cognee)\n\n" + memory(load("memory_ablation.json"))
+            + "\n### SIE vs frontier (Superlinked)\n\n" + sie(load("sie_benchmark.json")))
     text = README.read_text()
     a, b = text.index(START) + len(START), text.index(END)
     README.write_text(text[:a] + "\n" + body + "\n" + text[b:])
