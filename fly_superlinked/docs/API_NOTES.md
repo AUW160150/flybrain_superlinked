@@ -234,7 +234,7 @@ Catalog: https://superlinked.com/models (Markdown version at https://superlinked
 ## 1.12 Rate limits and cold starts
 
 - Rate limits **exist but no numbers are published** [V for existence, UNVERIFIED for limits]. `RateLimitError` docstring: "HTTP `429 TOO_MANY_REQUESTS` (code `RATE_LIMIT`, per-key or per-account, default-on)". The SDK retries and honours `Retry-After` within `provision_timeout_s`, then raises `RateLimitError`. A 402 means no credits or a spend limit was hit (cookbook `is_fatal` comment).
-- Cold starts [V]: dedicated capacity scales to zero, so the first request can be slow. While capacity starts, **SIE Relay** (a partner, on by default) may serve the request. `result["request"]["served_by"|"upstream"|"fallback_reason"]` show which one did. `remote="forbid"` (or the header `X-SIE-Remote: forbid`) disables Relay, and you then get `503 PROVISIONING` with `Retry-After` until capacity is up. The SDK waits by default (`wait_for_capacity=True`). Set `provision_timeout_s` for a hackathon demo.
+- Cold starts [V]: dedicated capacity scales to zero, so the first request can be slow. While capacity starts, **SIE Relay** (a partner, on by default) may serve the request. `result["request"]["served_by"|"upstream"|"fallback_reason"]` show which one did. `remote="forbid"` (or the header `X-SIE-Remote: forbid`) disables Relay, and you then get `503 PROVISIONING` with `Retry-After` until capacity is up. The SDK waits by default (`wait_for_capacity=True`). Set `provision_timeout_s` for a live demo.
 
 ---
 
